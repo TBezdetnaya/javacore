@@ -1,4 +1,4 @@
-package com.tbezdetnaya.runners;
+package com.tbezdetnaya.runners.homework;
 
 import com.tbezdetnaya.app.homework.lesson6.Calculation;
 
