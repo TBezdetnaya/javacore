@@ -1,7 +1,7 @@
 package com.tbezdetnaya.app.homework.lesson6;
 
 /**
- * Created by ACER PC on 22.11.2016.
+ * переделанное домашнее задание по уроку 5
  */
 public class Calculation {
     public double calculatorCirclArea(double a){
