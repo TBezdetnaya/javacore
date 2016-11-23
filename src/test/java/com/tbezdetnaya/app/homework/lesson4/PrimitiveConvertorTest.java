@@ -36,7 +36,7 @@ public class PrimitiveConvertorTest {
         char charVeriable = convertor.getCharVeriable();
         int expectedResult = convertor.getExpectedIntResult();
         int actualResult = convertor.getCharToInt(charVeriable);
-        Assert.assertEquals(expectedResult, actualResult);
+        Assert.assertNotEquals(expectedResult, actualResult);
 
     }
 
@@ -48,7 +48,7 @@ public class PrimitiveConvertorTest {
         long longVeriable = 922337203L;
         int expectedResult = 2147483647;
         int actualResult = (int)convertor.getLongToInt(longVeriable);
-        Assert.assertEquals( expectedResult, actualResult);
+        Assert.assertNotEquals( expectedResult, actualResult);
 
 
 

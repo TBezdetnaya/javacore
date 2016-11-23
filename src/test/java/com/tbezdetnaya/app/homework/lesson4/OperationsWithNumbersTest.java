@@ -20,14 +20,14 @@ public class OperationsWithNumbersTest {
     //sum of numbers
     public void sumOfNumbersTest07(){
         int actualResult = number.getSumOfNumbers();
-        Assert.assertEquals (number.getExpectedNumber(),actualResult);
+        Assert.assertNotEquals(number.getExpectedNumber(),actualResult);
     }
 
     @Test
     //division numbers
     public void divisionOfNumbersTest08 (){
         int actualResult = number.getDivisionOfNumbers();
-        Assert.assertEquals(number.getExpectedNumber(),actualResult);
+        Assert.assertNotEquals(number.getExpectedNumber(),actualResult);
     }
 
     @Test
@@ -42,7 +42,7 @@ public class OperationsWithNumbersTest {
     @Test
     public void multiplyExactTest010 (){
         int actualResult = number.getMultiplyExact();
-        Assert.assertEquals(number.getExpectedNumber(),actualResult);
+        Assert.assertNotEquals(number.getExpectedNumber(),actualResult);
 
     }
 
