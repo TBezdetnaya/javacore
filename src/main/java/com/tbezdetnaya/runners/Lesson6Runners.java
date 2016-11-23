@@ -1,14 +1,14 @@
 package com.tbezdetnaya.runners;
 
-import com.tbezdetnaya.app.homework.lesson05.Calculation;
+import com.tbezdetnaya.app.homework.lesson6.Calculation;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- * Created by ACER PC on 22.11.2016.
+ * переделанное домашнее задание по уроку 5
  */
-public class Lesson05Runners {
+public class Lesson6Runners {
     public static void main(String[] args) {
         boolean isInputValueCorrect;
         boolean isTryAgain = true;

@@ -1,4 +1,4 @@
-package com.tbezdetnaya.app.homework.lesson05;
+package com.tbezdetnaya.app.homework.lesson6;
 
 import junitparams.FileParameters;
 import junitparams.JUnitParamsRunner;

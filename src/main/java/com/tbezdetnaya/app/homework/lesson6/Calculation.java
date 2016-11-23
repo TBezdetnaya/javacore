@@ -1,4 +1,4 @@
-package com.tbezdetnaya.app.homework.lesson05;
+package com.tbezdetnaya.app.homework.lesson6;
 
 /**
  * Created by ACER PC on 22.11.2016.
