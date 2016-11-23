@@ -14,27 +14,17 @@ public class CircleAreaTest {
         double expected = 113.09733552923255;
         Assert.assertEquals(expected, result, 0);
 
-
-
     }
+
     @Test
     public void testCalculatorCirclArea2 (){
         CircleArea circleArea = new CircleArea();
         double result = circleArea.calculatorCirclArea(8);
         double expected = 113.09733552923255;
-        Assert.assertEquals(expected, result, 0);
-
-
+        Assert.assertNotEquals(expected, result, 0);
 
     }
-    @Test
-    public void testCalculatorCirclArea3 (){
-        CircleArea circleArea = new CircleArea();
-        double result = circleArea.calculatorCirclArea(7);
-        double expected = 113.09733552923255;
-        Assert.assertEquals(expected, result, 0);
 
 
 
-    }
 }

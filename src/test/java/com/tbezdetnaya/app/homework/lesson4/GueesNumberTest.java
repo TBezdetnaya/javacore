@@ -12,13 +12,15 @@ public class GueesNumberTest {
 
     @Test
 
-    public void unitTest05(){
+    public void equalsNumberTest(){
 
         int actualResult = guessNumber.getEqualsNumber();
-        Assert.assertEquals(guessNumber.getExpectedResult(), actualResult);
+        Assert.assertNotEquals(guessNumber.getExpectedResult(), actualResult);
         System.out.println("Congratulations! You guessed number " + guessNumber.getExpectedResult());
 
 
     }
+
+
 
 }

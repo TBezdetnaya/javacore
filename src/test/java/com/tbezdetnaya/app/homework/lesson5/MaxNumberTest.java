@@ -13,6 +13,15 @@ public class MaxNumberTest {
         MaxNumber biggerNumber = new MaxNumber();
         double result = biggerNumber.equalsNumber(5,7);
         double expected = 9;
+        Assert.assertNotEquals(expected, result, 0);
+
+    }
+
+    @Test
+    public void testEqualsNumber01(){
+        MaxNumber biggerNumber = new MaxNumber();
+        double result = biggerNumber.equalsNumber(5,7);
+        double expected = 7;
         Assert.assertEquals(expected, result, 0);
 
     }
