@@ -1,4 +1,4 @@
-package com.tbezdetnaya.app.classWork.lesson5;
+package com.tbezdetnaya.app.classwork.lesson5;
 
 import java.util.Scanner;
 
