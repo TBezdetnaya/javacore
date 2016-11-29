@@ -85,12 +85,13 @@ public class LoopArrays {
         int [] array = new int[15];
         for (int i = 0; i < array.length; i++) {
             array[i] = (int)(Math.random()* 1000);
-            System.out.print(array + " ");
+            System.out.print(array[i] + " ");
 
         }
-        int[] res = searchMinMaxNumber( array );
+
 
         System.out.println();
+        int[] res = searchMinMaxNumber( array );
         System.out.println("Минимальное число:  " + res[0]);
         System.out.println("Максимальное число: " + res[1]);
 
