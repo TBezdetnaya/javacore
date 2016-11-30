@@ -46,7 +46,7 @@ public class LoopArraysRunner {
                         loopArrays.task06();
                     }
                     if (number == 7) {
-                        loopArrays.task07();
+                        loopArrays.task7();
                     }
                 } catch (InputMismatchException exception) {
                     System.out.println("Error: invalid value");

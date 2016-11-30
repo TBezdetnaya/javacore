@@ -1,5 +1,8 @@
 package com.tbezdetnaya.app.homework.lesson7;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 /**
  * Created by Tanya on 26.11.2016.
  */
@@ -154,19 +157,48 @@ public class LoopArrays {
      * Запросить у пользователя ввести ряд чисел c вводом по одному через Enter (запрашиваем число - ввел число - Enter - запрашиваем следующее).
      * Ввод должен прерываться словом “exit”, о чем нужно сообщить пользователю. После этого вывести сумму всех введенных пользователем чисел.
      */
-    public void task07(){
+    // реализовано без массива
+    // public void task07(){
 
+    //    int sum = 0;
+    //    do{
+    //         sum = sum + Validation.getInt();
+    //    }
+    //    while (Validation.needContinue());
+    //   System.out.println(sum);
+    //}
+    public void task7(){
+        Scanner sc = new Scanner(System.in);
+        boolean isInputValueCorrect;
+        String answer;
         int sum = 0;
-        do{
-            sum = sum + Validation.getInt();
-        }
-        while (Validation.needContinue());
+
+        System.out.println("Укажите ряд чисел через энтер, по завершению указать Exit");
+        System.out.print("> ");
+
+        do {
+            isInputValueCorrect = false;
+
+            if (sc.hasNext()) {
+                answer = sc.next();
+                try {
+                    if (answer.equals("Exit")) {
+                        isInputValueCorrect = true;
+                    } else {
+                        int number = Integer.parseInt(answer);
+                        ArrayList arrayList = new ArrayList();
+
+                        arrayList.add(number);
+                        sum = sum + number;
+                    }
+
+                } catch (Exception e) {
+                    System.out.println("Error: invalid value");
+                }
+            }
+        } while (!isInputValueCorrect);
 
         System.out.println(sum);
 
-
     }
-
-
-
 }
