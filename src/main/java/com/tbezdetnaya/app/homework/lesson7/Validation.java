@@ -1,5 +1,4 @@
 package com.tbezdetnaya.app.homework.lesson7;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Validation {
@@ -40,7 +39,6 @@ public class Validation {
                 res = true;
             }
         } while (!isInputValueCorrect);
-
 
         return res;
     }

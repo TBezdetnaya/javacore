@@ -159,7 +159,6 @@ public class LoopArrays {
      */
     // реализовано без массива
     // public void task07(){
-
     //    int sum = 0;
     //    do{
     //         sum = sum + Validation.getInt();
@@ -173,7 +172,7 @@ public class LoopArrays {
         String answer;
         int sum = 0;
 
-        System.out.println("Укажите ряд чисел через энтер, по завершению указать Exit");
+        System.out.println("Input a few of numbers by Enter. Input Exit after it");
         System.out.print("> ");
 
         do {
