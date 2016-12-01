@@ -7,6 +7,7 @@ import java.util.Scanner;
  * Created by Tanya on 26.11.2016.
  */
 public class LoopArrays {
+    private Scanner sc = new Scanner(System.in);
     private int a = 0;
     /**
      * Создайте массив из всех чётных чисел от 2 до 20 и выведите элементы массива на экран сначала в строку,
@@ -158,43 +159,53 @@ public class LoopArrays {
      * Ввод должен прерываться словом “exit”, о чем нужно сообщить пользователю. После этого вывести сумму всех введенных пользователем чисел.
      */
     // реализовано без массива
-    // public void task07(){
-    //    int sum = 0;
-    //    do{
-    //         sum = sum + Validation.getInt();
-    //    }
-    //    while (Validation.needContinue());
-    //   System.out.println(sum);
-    //}
-    public void task7(){
-        Scanner sc = new Scanner(System.in);
+    public void task07(){
+        int sum = 0;
+        System.out.println("Input the few of numbers using ENTER button. Enter 'exit' to stop input and see the sum of all numbers");
+        System.out.print("> ");
+        while (sc.hasNext()){
+            if (sc.hasNextInt()){
+                int number = sc.nextInt();
+                sum = sum + number;
+            }else{
+                String answer = sc.next();
+                if (answer.equals("exit")){
+                    break;
+                }else{
+                    System.out.println("Error: invalid value");
+                }
+            }
+        }
+        System.out.println("Sum is: " + sum);
+    }
+
+
+    public void task7() {
+
         boolean isInputValueCorrect;
         String answer;
         int sum = 0;
 
-        System.out.println("Input a few of numbers by Enter. Input Exit after it");
+        System.out.println("Input the few of numbers using ENTER button. Enter 'exit' to stop input and see the sum of all numbers");
         System.out.print("> ");
-
         do {
             isInputValueCorrect = false;
+            answer = sc.next();
+            try {
+                if (answer.equals("Exit")) {
+                    isInputValueCorrect = true;
+                } else {
+                    int number = Integer.parseInt(answer);
+                    ArrayList arrayList = new ArrayList();
 
-            if (sc.hasNext()) {
-                answer = sc.next();
-                try {
-                    if (answer.equals("Exit")) {
-                        isInputValueCorrect = true;
-                    } else {
-                        int number = Integer.parseInt(answer);
-                        ArrayList arrayList = new ArrayList();
-
-                        arrayList.add(number);
-                        sum = sum + number;
-                    }
-
-                } catch (Exception e) {
-                    System.out.println("Error: invalid value");
+                    arrayList.add(number);
+                    sum = sum + number;
                 }
+
+            } catch (Exception e) {
+                System.out.println("Error: invalid value");
             }
+
         } while (!isInputValueCorrect);
 
         System.out.println(sum);
