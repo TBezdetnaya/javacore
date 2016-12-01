@@ -172,7 +172,6 @@ public class LoopArrays {
                 }else{
                     System.out.println("Error: invalid value");
                 }
-
             }
         }
         System.out.println("Sum is: " + sum);
