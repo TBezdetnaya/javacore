@@ -165,19 +165,19 @@ public class LoopArrays {
         System.out.print("> ");
         while (sc.hasNext()){
             if (sc.hasNextInt()){
-                int number = sc.nextInt();
-                sum = sum + number;
+                sum = sum + sc.nextInt();
             }else{
-                String answer = sc.next();
-                if (answer.equals("exit")){
+                if (sc.next().equals("exit")){
                     break;
                 }else{
                     System.out.println("Error: invalid value");
                 }
+
             }
         }
         System.out.println("Sum is: " + sum);
     }
+
 
 
     public void task7() {
