@@ -160,22 +160,16 @@ public class LoopArrays {
      */
     // реализовано без массива
     public void task07(){
+
         int sum = 0;
         System.out.println("Input the few of numbers using ENTER button. Enter 'exit' to stop input and see the sum of all numbers");
         System.out.print("> ");
-        while (sc.hasNext()){
-            if (sc.hasNextInt()){
-                sum = sum + sc.nextInt();
-            }else{
-                if (sc.next().equals("exit")){
-                    break;
-                }else{
-                    System.out.println("Error: invalid value");
-                }
-            }
+        while (sc.hasNextInt()){
+            sum += sc.nextInt();
         }
         System.out.println("Sum is: " + sum);
     }
+
 
 
 
