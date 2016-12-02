@@ -1,13 +1,10 @@
 package com.tbezdetnaya.app.homework.lesson7;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Validation {
     private static Scanner sc = new Scanner(System.in);
 
     public static int getInt() {
-
-
         System.out.println("Input number");
         System.out.print("> ");
         return sc.nextInt();
@@ -17,8 +14,10 @@ public class Validation {
     public static boolean needContinue() {
 
         boolean isInputValueCorrect;
-        String answer = null;
         boolean res = false;
+        String answer = null;
+
+
         do {
             isInputValueCorrect = false;
             System.out.println("-----------------------");
@@ -38,11 +37,8 @@ public class Validation {
                 res = true;
             }
         } while (!isInputValueCorrect);
-
-
         return res;
     }
-
 
 }
 
