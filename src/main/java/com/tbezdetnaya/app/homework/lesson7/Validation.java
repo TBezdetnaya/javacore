@@ -1,10 +1,13 @@
 package com.tbezdetnaya.app.homework.lesson7;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Validation {
     private static Scanner sc = new Scanner(System.in);
 
     public static int getInt() {
+
+
         System.out.println("Input number");
         System.out.print("> ");
         return sc.nextInt();
@@ -12,26 +15,22 @@ public class Validation {
     }
 
     public static boolean needContinue() {
-
         boolean isInputValueCorrect;
+        String answer;
         boolean res = false;
-        String answer = null;
-
-
         do {
             isInputValueCorrect = false;
             System.out.println("-----------------------");
             System.out.println("Exit the program? (yes/no)");
             System.out.print("> ");
 
-            if (sc.hasNext()) {
-                answer = sc.next();
-                if (answer.equals("yes") || answer.equals("no")) {
-                    isInputValueCorrect = true;
-                } else {
-                    System.out.println("Error: invalid value");
-                }
+            answer = sc.next();
+            if (answer.equals("yes") || answer.equals("no")) {
+                isInputValueCorrect = true;
+            } else {
+                System.out.println("Error: invalid value");
             }
+
             if (answer.equals("no")) {
                 sc.nextLine();
                 res = true;
@@ -39,6 +38,7 @@ public class Validation {
         } while (!isInputValueCorrect);
         return res;
     }
+
 
 }
 
