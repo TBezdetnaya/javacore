@@ -14,7 +14,7 @@ public class LoopArrays {
      * отделяя один элемент от другого пробелом, а затем в столбик (отделяя один элемент от другого началом новой строки).
      * Перед созданием массива подумайте, какого он будет размера.
      */
-    public void task01(){
+    public void showDimentionalArray(){
 
         for (int i = 2; i < 22 ; i+=2) {
             a++;
@@ -34,7 +34,7 @@ public class LoopArrays {
 
     }
 
-    public void task02(){
+    public void sortDimentionalArray(){
         /**
          * Создайте массив из всех нечётных чисел от 1 до 99, выведите его на экран в строку,
          * а затем этот же массив выведите на экран в другую строку, но в обратном порядке (99 97 95 93 … 7 5 3 1).
@@ -67,7 +67,7 @@ public class LoopArrays {
      * Выведите массив на экран. Подсчитайте сколько в массиве чётных элементов и выведете это количество на экран на отдельной строке.
      */
 
-    public void task03(){
+    public void arrayEvenNumbers(){
         int [] array = new int [15];
         for (int i = 0; i < array.length ; i++) {
             array[i] = (int) (Math.random() * 10);
@@ -85,7 +85,7 @@ public class LoopArrays {
      * Создайте массив из 15 случайных целых чисел из отрезка [0;999].
      * Выведите массив на экран. Выведите минимальное и максимальное значение элементов массива
      */
-    public void task04(){
+    public void arrayMinMaxNumbers(){
         int [] array = new int[15];
         for (int i = 0; i < array.length; i++) {
             array[i] = (int)(Math.random()* 1000);
@@ -122,7 +122,7 @@ public class LoopArrays {
     /**
      * Создать двумерный массив из 8 строк по 5 столбцов в каждой из случайных целых чисел из отрезка [10;99]. Вывести массив на экран.
      */
-    public void task05(){
+    public void sortMultiDimentionalArray(){
         int [][] array = new int [8][5];
         int min = 10;
         int max = 99;
@@ -142,7 +142,7 @@ public class LoopArrays {
      */
 
 
-    public void task06(){
+    public void sortMultiDimentionalArrayNew(){
         int[][] array = new int[8][5];
         for (int i = 1; i < array.length; i++) {
             for (int j = 1; j < array[i].length; j++) {
@@ -159,7 +159,7 @@ public class LoopArrays {
      * Ввод должен прерываться словом “exit”, о чем нужно сообщить пользователю. После этого вывести сумму всех введенных пользователем чисел.
      */
     // реализовано без массива
-    public void task07(){
+    public void sumOfumbers(){
 
         int sum = 0;
         System.out.println("Input the few of numbers using ENTER button. Enter 'exit' to stop input and see the sum of all numbers");

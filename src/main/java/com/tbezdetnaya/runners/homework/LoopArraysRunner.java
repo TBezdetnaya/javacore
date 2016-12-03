@@ -28,25 +28,25 @@ public class LoopArraysRunner {
                 try {
                     int number = sc.nextInt();
                     if (number == 1) {
-                        loopArrays.task01();
+                        loopArrays.showDimentionalArray();
                     }
                     if (number == 2) {
-                        loopArrays.task02();
+                        loopArrays.sortDimentionalArray();
                     }
                     if (number == 3) {
-                        loopArrays.task03();
+                        loopArrays.arrayEvenNumbers();
                     }
                     if (number == 4) {
-                        loopArrays.task04();
+                        loopArrays.arrayMinMaxNumbers();
                     }
                     if (number == 5) {
-                        loopArrays.task05();
+                        loopArrays.sortMultiDimentionalArray();
                     }
                     if (number == 6) {
-                        loopArrays.task06();
+                        loopArrays.sortMultiDimentionalArrayNew();
                     }
                     if (number == 7) {
-                        loopArrays.task07();
+                        loopArrays.sumOfumbers();
                     }
                 } catch (InputMismatchException exception) {
                     System.out.println("Error: invalid value");
