@@ -12,7 +12,6 @@ public class LoopArraysRunner {
         LoopArrays loopArrays = new LoopArrays();
         Scanner sc = new Scanner(System.in);
         try {
-
             do {
                 System.out.println("Привет! данное приложение выполняет несколько задач");
                 System.out.println("----------------------------------------------------");
@@ -46,7 +45,7 @@ public class LoopArraysRunner {
                         loopArrays.sortMultiDimentionalArrayNew();
                     }
                     if (number == 7) {
-                        loopArrays.sumOfumbers();
+                        loopArrays.sumOfNumbers();
                     }
                 } catch (InputMismatchException exception) {
                     System.out.println("Error: invalid value");

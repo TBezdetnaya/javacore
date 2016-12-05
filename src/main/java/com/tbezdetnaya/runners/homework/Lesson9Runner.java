@@ -1,9 +1,7 @@
 package com.tbezdetnaya.runners.homework;
-
 import com.tbezdetnaya.app.homework.lesson9.ArrayPrint;
 import com.tbezdetnaya.app.homework.lesson7.LoopArrays;
 import com.tbezdetnaya.app.homework.lesson7.Validation;
-
 import java.util.Scanner;
 
 /**
@@ -16,18 +14,19 @@ public class Lesson9Runner {
         Scanner sc = new Scanner(System.in);
 
         do {
-            System.out.println("Привет! данное приложение выполняет несколько задач, выбирете число");
+            System.out.println("Welcome! This application executes several tasks. Enter a number to begin the work:");
             System.out.println("----------------------------------------------------");
-            System.out.println("1 - для cоздания массива из всех чётных чисел от 2 до 20");
-            System.out.println("2 - для создания из всех не чётных чисел от 1 до 99");
-            System.out.println("3 - для создания массива из 15 случайных целых чисел из отрезка [0;9]");
-            System.out.println("4 - для создания массива из 15 случайных целых чисел из отрезка [0;999]");
-            System.out.println("5 - для вывода двумерного массива из 8 строк по 5 столбцов в каждой из случайных целых чисел из отрезка [10;99]");
-            System.out.println("6 - для вывода двумерного массив из 8 строк по 5 столбцов в каждой из случайных целых чисел из отрезка [1;999]");
-            System.out.println("7 - для выполнения задачи №7");
-            System.out.println("8 или 9 - для сортировки массива из случайных чисел по возростанию.");
-            System.out.println("10 или 11 - для сортировки массива из случыйных чисел по убыванию.");
-            System.out.println("12 - для сортировки выбором, массива из случайных чисел.");
+            System.out.println(" Enter 1 - to create an array with all even numbers from 2 to 20");
+            System.out.println("2 - to create an array with all not even numbers from 1 to 99");
+            System.out.println("3 - to create an array with 15 random  numbers from a segment [0;9]");
+            System.out.println("4 - to create an array with 15 random  numbers from a segment[0;999]");
+            System.out.println("5 - to create a two-dimensional array with 8 lines for 5 columns from random whole numbers from a segment[10;99]");
+            System.out.println("6 - to create a two-dimensional array with 8 lines for 5 columns from random whole numbers from a segment[1;999]");
+            System.out.println("7 - to execute a task №7");
+            System.out.println("8 or 9 - sorts the specified array into ascending numerical order.");
+            System.out.println("10 или 11 - sorts the specified array into decrease number ");
+            System.out.println("12 - selection sorts the specified array.");
+            System.out.println("13 - to create a two-dimensional array from a segment [-99; 99].");
             System.out.println(">");
 
             switch (sc.nextInt()) {
@@ -43,17 +42,19 @@ public class Lesson9Runner {
                     break;
                 case 6: loopArrays.sortMultiDimentionalArrayNew();
                     break;
-                case 7: loopArrays.sumOfumbers();
+                case 7: loopArrays.sumOfNumbers();
                     break;
                 case 8: arrayPrint.printResultSortArrayAscend();
                     break;
-                case 9: arrayPrint.printResultArraySortAscend();
+                case 9: arrayPrint.printResultArraySortAscending();
                     break;
                 case 10: arrayPrint.printResultArraySortDecrease();
                     break;
                 case 11: arrayPrint.printResultSortArrayDecrease();
                     break;
                 case 12: arrayPrint.printResultSelectionSortArray();
+                    break;
+                case 13: arrayPrint.printMultiDimentionalArray();
                     break;
                 default:
                     System.out.println("Error: invalid value");

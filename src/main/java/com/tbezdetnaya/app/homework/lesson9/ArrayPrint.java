@@ -1,9 +1,8 @@
 package com.tbezdetnaya.app.homework.lesson9;
-import com.tbezdetnaya.app.homework.lesson9.BubbleSort;
 import java.util.Arrays;
 
 public class ArrayPrint {
-   private BubbleSort bubbleSort = new BubbleSort();
+   private OperationsWithArrays operationsWithArrays = new OperationsWithArrays();
 
     public  void printResultSortArrayAscend(){
 
@@ -14,7 +13,7 @@ public class ArrayPrint {
             System.out.print(arr[i] + "  ");
         }
         System.out.println();
-        arr = bubbleSort.arraySortAscend(arr);
+        arr = operationsWithArrays.arraySortAscending(arr);
         for(int i = 0; i <  arr.length; i++) {
             System.out.print(arr[i] + "  ");
 
@@ -29,7 +28,7 @@ public class ArrayPrint {
             System.out.print(arr[i] + "  ");
         }
         System.out.println();
-        arr = bubbleSort.arraySortDecrease(arr);
+        arr = operationsWithArrays.arraySortDecrease(arr);
         for(int i = 0; i <  arr.length; i++) {
             System.out.print(arr[i] + "  ");
 
@@ -43,7 +42,7 @@ public class ArrayPrint {
             System.out.print(arr[i] + "  ");
         }
         System.out.println();
-        arr = bubbleSort.selectionSortArray(arr);
+        arr = operationsWithArrays.selectionSortArray(arr);
         for(int i = 0; i <  arr.length; i++) {
             System.out.print(arr[i] + "  ");
 
@@ -52,14 +51,14 @@ public class ArrayPrint {
 
     }
 
-    public void printResultArraySortAscend(){
+    public void printResultArraySortAscending(){
         int arr[] = new int[10];
         for(int i = 0; i < arr.length; i++) {
             arr[i] = (int) (Math.random() * 100);
             System.out.print(arr[i] + "  ");
         }
         System.out.println();
-        System.out.println("Sorted array:" + Arrays.toString(bubbleSort.sortArrayAscend(arr)));
+        System.out.println("Sorted array:" + Arrays.toString(operationsWithArrays.sortArrayAscend(arr)));
 
     }
     public void printResultArraySortDecrease() {
@@ -69,8 +68,25 @@ public class ArrayPrint {
             System.out.print(arr[i] + " ");
         }
         System.out.println();
-        System.out.println("Sorted array:" + Arrays.toString(bubbleSort.sortArrayDecrease(arr)));
+        System.out.println("Sorted array:" + Arrays.toString(operationsWithArrays.sortArrayDecrease(arr)));
     }
 
+    /**
+     * Создать двумерный массив из 5 строк по 8 столбцов в каждой из случайных целых чисел из отрезка [-99;99].
+     * Вывести массив на экран. После на отдельной строке вывести на экран значение максимального элемента этого массива (его индекс не имеет значения).
 
+     */
+
+    public void printMultiDimentionalArray(){
+        int arr [][] = new int[5][8];
+        for (int i = 0; i <arr.length ; i++) {
+            for (int j = 0; j < arr[i].length ; j++) {
+                arr[i][j] = (int)(Math.random()*99) - 99;
+                System.out.printf("%4d",arr[i][j]);
+
+            }
+            System.out.println();
+        }
+        System.out.println("Max number is: " + operationsWithArrays.searchMaxNumberArray(arr));
+    }
 }

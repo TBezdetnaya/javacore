@@ -159,7 +159,7 @@ public class LoopArrays {
      * Ввод должен прерываться словом “exit”, о чем нужно сообщить пользователю. После этого вывести сумму всех введенных пользователем чисел.
      */
     // реализовано без массива
-    public void sumOfumbers(){
+    public void sumOfNumbers(){
 
         int sum = 0;
         System.out.println("Input the few of numbers using ENTER button. Enter 'exit' to stop input and see the sum of all numbers");

@@ -6,8 +6,8 @@ import java.util.Collections;
 /**
  * Created by Tanya on 03.12.2016.
  */
-public class BubbleSort {
-    public  int[] arraySortAscend (int [] sourceArr) {
+public class OperationsWithArrays {
+    public  int[] arraySortAscending (int [] sourceArr) {
         int[] arr = sourceArr.clone();
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length - 1; j++) {
@@ -17,7 +17,6 @@ public class BubbleSort {
                     arr[j + 1] = tmp;
                 }
             }
-
         }
         return arr;
     }
@@ -32,7 +31,6 @@ public class BubbleSort {
                     arr[j + 1] = tmp;
                 }
             }
-
         }
         return arr;
     }
@@ -44,13 +42,24 @@ public class BubbleSort {
                     int temp = arr[j];
                     arr[j] = arr[i];
                     arr[i] = temp;
-
-
                 }
-
             }
         }
         return arr;
+    }
+    public int searchMaxNumberArray(int [][] sourseArr){
+        int [][] arr = sourseArr.clone();
+        int min = arr[0][0];
+
+        for (int i = 0; i <arr.length ; i++) {
+            for (int j = 0; j <arr[i].length ; j++) {
+                if (arr [i][j]> min){
+                    min = arr[i][j];
+                }
+            }
+        }
+        return min;
+
     }
 
     // сортировка средствами Java
@@ -59,7 +68,6 @@ public class BubbleSort {
         int [] arr = sourceArr.clone();
         Arrays.sort(arr);
         return arr;
-
     }
     public  Integer[] sortArrayDecrease (Integer [] sourceArr){
         Integer arr [] = sourceArr.clone();
