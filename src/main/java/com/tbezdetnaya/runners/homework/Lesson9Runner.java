@@ -1,6 +1,6 @@
 package com.tbezdetnaya.runners.homework;
 
-import com.tbezdetnaya.app.homework.ArrayPrint;
+import com.tbezdetnaya.app.homework.lesson9.ArrayPrint;
 import com.tbezdetnaya.app.homework.lesson7.LoopArrays;
 import com.tbezdetnaya.app.homework.lesson7.Validation;
 

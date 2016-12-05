@@ -1,4 +1,4 @@
-package com.tbezdetnaya.app.homework;
+package com.tbezdetnaya.app.homework.lesson9;
 import com.tbezdetnaya.app.homework.lesson9.BubbleSort;
 import java.util.Arrays;
 
