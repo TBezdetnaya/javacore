@@ -33,7 +33,7 @@ public class OperationswWithArraysTest {
     public void testSortArrayAscend() throws Exception {
         int [] arr = {62, 92, 43, 3, 75, 45, 43, 40, 76, 3 };
         int [] expected ={3, 3, 40, 43, 43, 45, 62, 75, 76, 92};
-        int [] result = operationsWithArrays.sortArrayAscend(arr);
+        int [] result = operationsWithArrays.sortArrayAscending(arr);
         Assert.assertArrayEquals(expected,result);
 
     }
@@ -42,7 +42,7 @@ public class OperationswWithArraysTest {
     public void testSortArrayDecrease()throws Exception {
         Integer arr [] = {11, 96, 7, 10, 71, 19, 48, 75, 69, 37 };
         Integer expected [] = {96, 75, 71, 69, 48, 37, 19, 11, 10, 7};
-        Integer result[] = operationsWithArrays.sortArrayDecrease(arr);
+        Integer result[] = operationsWithArrays.sortIntegerArrayDecrease(arr);
         Assert.assertArrayEquals(expected,result);
 
     }

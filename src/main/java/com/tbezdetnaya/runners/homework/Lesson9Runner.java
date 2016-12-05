@@ -1,8 +1,10 @@
 package com.tbezdetnaya.runners.homework;
 
+import com.tbezdetnaya.app.homework.lesson9.ArrayGenerator;
 import com.tbezdetnaya.app.homework.lesson9.ArrayPrint;
 import com.tbezdetnaya.app.homework.lesson7.LoopArrays;
 import com.tbezdetnaya.app.homework.lesson7.Validation;
+import com.tbezdetnaya.app.homework.lesson9.OperationsWithArrays;
 
 import java.util.Scanner;
 
@@ -13,6 +15,8 @@ public class Lesson9Runner {
     public static void main(String[] args) {
         LoopArrays loopArrays = new LoopArrays();
         ArrayPrint arrayPrint = new ArrayPrint();
+        ArrayGenerator arrayGenerator = new ArrayGenerator();
+        OperationsWithArrays operationsWithArrays = new OperationsWithArrays();
         Scanner sc = new Scanner(System.in);
 
         do {
@@ -26,7 +30,7 @@ public class Lesson9Runner {
             System.out.println("6 - to create a two-dimensional array with 8 lines for 5 columns from random whole numbers from a segment[1;999]");
             System.out.println("7 - to execute a task №7");
             System.out.println("8 or 9 - sorts the specified array into ascending numerical order.");
-            System.out.println("10 или 11 - sorts the specified array into decrease number ");
+            System.out.println("10 or 11 - sorts the specified array into decrease number ");
             System.out.println("12 - selection sorts the specified array.");
             System.out.println("13 - to create a two-dimensional array from a segment [-99; 99].");
             System.out.println(">");
@@ -53,24 +57,49 @@ public class Lesson9Runner {
                 case 7:
                     loopArrays.sumOfNumbers();
                     break;
-                case 8:
-                    arrayPrint.printResultSortArrayAscend();
-                    break;
-                case 9:
-                    arrayPrint.printResultArraySortAscending();
-                    break;
-                case 10:
-                    arrayPrint.printResultArraySortDecrease();
-                    break;
-                case 11:
-                    arrayPrint.printResultSortArrayDecrease();
-                    break;
-                case 12:
-                    arrayPrint.printResultSelectionSortArray();
-                    break;
-                case 13:
-                    arrayPrint.printMultiDimentionalArray();
-                    break;
+                case 8: {
+                    int[] arr = arrayGenerator.createRandomArray();
+                    arrayPrint.printArray(arr);
+                    int[] arr2 = operationsWithArrays.arraySortAscending(arr);
+                    arrayPrint.printArray(arr2);
+                }
+                break;
+                case 9: {
+                    int[] arr = arrayGenerator.createRandomArray();
+                    arrayPrint.printArray(arr);
+                    int[] arr2 = operationsWithArrays.sortArrayAscending(arr);
+                    arrayPrint.printResultSortArrayAscending(arr2);
+                }
+                break;
+
+                case 10: {
+                    Integer[] arr = arrayGenerator.creatIntegerRandomArray();
+                    arrayPrint.printIntegerArray(arr);
+                    Integer[] arr2 = operationsWithArrays.sortIntegerArrayDecrease(arr);
+                    arrayPrint.printResultSortIntegerArrayDecrease(arr2);
+                }
+                break;
+                case 11: {
+                    int[] arr = arrayGenerator.createRandomArray();
+                    arrayPrint.printArray(arr);
+                    int[] arr2 = operationsWithArrays.arraySortDecrease(arr);
+                    arrayPrint.printArray(arr2);
+                }
+                break;
+                case 12: {
+                    int[] arr = arrayGenerator.createRandomArray();
+                    arrayPrint.printArray(arr);
+                    int[] arr2 = operationsWithArrays.selectionSortArray(arr);
+                    arrayPrint.printArray(arr2);
+                }
+                break;
+                case 13: {
+                    int[][] arr = arrayGenerator.createMultiDimentionalArray();
+                    arrayPrint.printMultiDimentionalArray(arr);
+                    int max = operationsWithArrays.searchMaxNumberArray(arr);
+                    arrayPrint.printResultSearchMaxNumberArray(max);
+                }
+                break;
                 default:
                     System.out.println("Error: invalid value");
 

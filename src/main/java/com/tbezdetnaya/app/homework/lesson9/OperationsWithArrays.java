@@ -1,5 +1,4 @@
 package com.tbezdetnaya.app.homework.lesson9;
-
 import java.util.Arrays;
 import java.util.Collections;
 
@@ -51,16 +50,16 @@ public class OperationsWithArrays {
 
     public int searchMaxNumberArray(int[][] sourseArr) {
         int[][] arr = sourseArr.clone();
-        int min = arr[0][0];
+        int max = arr[0][0];
 
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
-                if (arr[i][j] > min) {
-                    min = arr[i][j];
+                if (arr[i][j] > max) {
+                    max = arr[i][j];
                 }
             }
         }
-        return min;
+        return max;
 
     }
 
@@ -72,7 +71,7 @@ public class OperationsWithArrays {
         return arr;
     }
 
-    public Integer[] sortArrayDecrease(Integer[] sourceArr) {
+    public Integer[] sortIntegerArrayDecrease(Integer[] sourceArr) {
         Integer arr[] = sourceArr.clone();
         Arrays.sort(arr, Collections.reverseOrder());
         return arr;
