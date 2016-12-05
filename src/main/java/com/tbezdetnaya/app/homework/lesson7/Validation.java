@@ -21,8 +21,8 @@ public class Validation {
         do {
             isInputValueCorrect = false;
             System.out.println("-----------------------");
-            System.out.println("Exit the program? (yes/no)");
-            System.out.print("> ");
+            System.out.print("Exit the program? (yes/no)");
+            System.out.println("> ");
 
             answer = sc.next();
             if (answer.equals("yes") || answer.equals("no")) {
