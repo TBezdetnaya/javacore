@@ -7,7 +7,7 @@ import java.util.Collections;
  * Created by Tanya on 03.12.2016.
  */
 public class OperationsWithArrays {
-    public  int[] arraySortAscending (int [] sourceArr) {
+    public int[] arraySortAscending(int[] sourceArr) {
         int[] arr = sourceArr.clone();
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length - 1; j++) {
@@ -21,7 +21,7 @@ public class OperationsWithArrays {
         return arr;
     }
 
-    public  int[] arraySortDecrease (int [] sourceArr) {
+    public int[] arraySortDecrease(int[] sourceArr) {
         int[] arr = sourceArr.clone();
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length - 1; j++) {
@@ -34,7 +34,8 @@ public class OperationsWithArrays {
         }
         return arr;
     }
-    public  int[] selectionSortArray(int []sourseArr){
+
+    public int[] selectionSortArray(int[] sourseArr) {
         int[] arr = sourseArr.clone();
         for (int i = 0; i < arr.length; i++) {
             for (int j = i + 1; j < arr.length; j++) {
@@ -47,13 +48,14 @@ public class OperationsWithArrays {
         }
         return arr;
     }
-    public int searchMaxNumberArray(int [][] sourseArr){
-        int [][] arr = sourseArr.clone();
+
+    public int searchMaxNumberArray(int[][] sourseArr) {
+        int[][] arr = sourseArr.clone();
         int min = arr[0][0];
 
-        for (int i = 0; i <arr.length ; i++) {
-            for (int j = 0; j <arr[i].length ; j++) {
-                if (arr [i][j]> min){
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] > min) {
                     min = arr[i][j];
                 }
             }
@@ -64,13 +66,14 @@ public class OperationsWithArrays {
 
     // сортировка средствами Java
 
-    public int[] sortArrayAscend (int [] sourceArr){
-        int [] arr = sourceArr.clone();
+    public int[] sortArrayAscending(int[] sourceArr) {
+        int[] arr = sourceArr.clone();
         Arrays.sort(arr);
         return arr;
     }
-    public  Integer[] sortArrayDecrease (Integer [] sourceArr){
-        Integer arr [] = sourceArr.clone();
+
+    public Integer[] sortArrayDecrease(Integer[] sourceArr) {
+        Integer arr[] = sourceArr.clone();
         Arrays.sort(arr, Collections.reverseOrder());
         return arr;
     }

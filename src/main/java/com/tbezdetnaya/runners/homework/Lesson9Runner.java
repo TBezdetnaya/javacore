@@ -1,7 +1,9 @@
 package com.tbezdetnaya.runners.homework;
+
 import com.tbezdetnaya.app.homework.lesson9.ArrayPrint;
 import com.tbezdetnaya.app.homework.lesson7.LoopArrays;
 import com.tbezdetnaya.app.homework.lesson7.Validation;
+
 import java.util.Scanner;
 
 /**
@@ -30,38 +32,50 @@ public class Lesson9Runner {
             System.out.println(">");
 
             switch (sc.nextInt()) {
-                case 1: loopArrays.showDimentionalArray();
+                case 1:
+                    loopArrays.showDimentionalArray();
                     break;
-                case 2: loopArrays.sortDimentionalArray();
+                case 2:
+                    loopArrays.sortDimentionalArray();
                     break;
-                case 3: loopArrays.arrayEvenNumbers();
+                case 3:
+                    loopArrays.arrayEvenNumbers();
                     break;
-                case 4: loopArrays.arrayMinMaxNumbers();
+                case 4:
+                    loopArrays.arrayMinMaxNumbers();
                     break;
-                case 5: loopArrays.sortMultiDimentionalArray();
+                case 5:
+                    loopArrays.sortMultiDimentionalArray();
                     break;
-                case 6: loopArrays.sortMultiDimentionalArrayNew();
+                case 6:
+                    loopArrays.sortMultiDimentionalArrayNew();
                     break;
-                case 7: loopArrays.sumOfNumbers();
+                case 7:
+                    loopArrays.sumOfNumbers();
                     break;
-                case 8: arrayPrint.printResultSortArrayAscend();
+                case 8:
+                    arrayPrint.printResultSortArrayAscend();
                     break;
-                case 9: arrayPrint.printResultArraySortAscending();
+                case 9:
+                    arrayPrint.printResultArraySortAscending();
                     break;
-                case 10: arrayPrint.printResultArraySortDecrease();
+                case 10:
+                    arrayPrint.printResultArraySortDecrease();
                     break;
-                case 11: arrayPrint.printResultSortArrayDecrease();
+                case 11:
+                    arrayPrint.printResultSortArrayDecrease();
                     break;
-                case 12: arrayPrint.printResultSelectionSortArray();
+                case 12:
+                    arrayPrint.printResultSelectionSortArray();
                     break;
-                case 13: arrayPrint.printMultiDimentionalArray();
+                case 13:
+                    arrayPrint.printMultiDimentionalArray();
                     break;
                 default:
                     System.out.println("Error: invalid value");
 
             }
         } while (Validation.needContinue());
-
 
 
     }
