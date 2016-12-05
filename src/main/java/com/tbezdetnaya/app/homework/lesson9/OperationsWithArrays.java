@@ -6,8 +6,8 @@ import java.util.Collections;
  * Created by Tanya on 03.12.2016.
  */
 public class OperationsWithArrays {
-    public int[] arraySortAscending(int[] sourceArr) {
-        int[] arr = sourceArr.clone();
+    public Integer[] arraySortAscending(Integer[] sourceArr) {
+        Integer[] arr = sourceArr.clone();
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length - 1; j++) {
                 if (arr[j] > arr[j + 1]) {
@@ -16,12 +16,11 @@ public class OperationsWithArrays {
                     arr[j + 1] = tmp;
                 }
             }
-        }
-        return arr;
+        } return arr;
     }
 
-    public int[] arraySortDecrease(int[] sourceArr) {
-        int[] arr = sourceArr.clone();
+    public Integer[] arraySortDecrease(Integer[] sourceArr) {
+        Integer[] arr = sourceArr.clone();
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length - 1; j++) {
                 if (arr[j] < arr[j + 1]) {
@@ -34,8 +33,8 @@ public class OperationsWithArrays {
         return arr;
     }
 
-    public int[] selectionSortArray(int[] sourseArr) {
-        int[] arr = sourseArr.clone();
+    public Integer[] selectionSortArray(Integer[] sourseArr) {
+        Integer[]arr = sourseArr.clone();
         for (int i = 0; i < arr.length; i++) {
             for (int j = i + 1; j < arr.length; j++) {
                 if (arr[j] < arr[i]) {
@@ -65,8 +64,8 @@ public class OperationsWithArrays {
 
     // сортировка средствами Java
 
-    public int[] sortArrayAscending(int[] sourceArr) {
-        int[] arr = sourceArr.clone();
+    public Integer[]sortArrayAscending(Integer[] sourceArr) {
+        Integer[] arr = sourceArr.clone();
         Arrays.sort(arr);
         return arr;
     }

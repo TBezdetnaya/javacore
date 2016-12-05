@@ -58,39 +58,39 @@ public class Lesson9Runner {
                     loopArrays.sumOfNumbers();
                     break;
                 case 8: {
-                    int[] arr = arrayGenerator.createRandomArray();
+                    Integer[] arr = arrayGenerator.creatRandomArray();
                     arrayPrint.printArray(arr);
-                    int[] arr2 = operationsWithArrays.arraySortAscending(arr);
-                    arrayPrint.printArray(arr2);
+                    Integer[] arr2 = operationsWithArrays.arraySortAscending(arr);
+                    arrayPrint.printResultSortArray(arr2);
                 }
                 break;
                 case 9: {
-                    int[] arr = arrayGenerator.createRandomArray();
+                    Integer[] arr = arrayGenerator.creatRandomArray();
                     arrayPrint.printArray(arr);
-                    int[] arr2 = operationsWithArrays.sortArrayAscending(arr);
-                    arrayPrint.printResultSortArrayAscending(arr2);
+                    Integer[] arr2 = operationsWithArrays.sortArrayAscending(arr);
+                    arrayPrint.printResultSortArray(arr2);
                 }
                 break;
 
                 case 10: {
-                    Integer[] arr = arrayGenerator.creatIntegerRandomArray();
-                    arrayPrint.printIntegerArray(arr);
+                    Integer[] arr = arrayGenerator.creatRandomArray();
+                    arrayPrint.printArray(arr);
                     Integer[] arr2 = operationsWithArrays.sortIntegerArrayDecrease(arr);
-                    arrayPrint.printResultSortIntegerArrayDecrease(arr2);
+                    arrayPrint.printResultSortArray(arr2);
                 }
                 break;
                 case 11: {
-                    int[] arr = arrayGenerator.createRandomArray();
+                    Integer[] arr = arrayGenerator.creatRandomArray();
                     arrayPrint.printArray(arr);
-                    int[] arr2 = operationsWithArrays.arraySortDecrease(arr);
-                    arrayPrint.printArray(arr2);
+                    Integer[] arr2 = operationsWithArrays.arraySortDecrease(arr);
+                    arrayPrint.printResultSortArray(arr2);
                 }
                 break;
                 case 12: {
-                    int[] arr = arrayGenerator.createRandomArray();
+                    Integer[] arr = arrayGenerator.creatRandomArray();
                     arrayPrint.printArray(arr);
-                    int[] arr2 = operationsWithArrays.selectionSortArray(arr);
-                    arrayPrint.printArray(arr2);
+                    Integer[] arr2 = operationsWithArrays.selectionSortArray(arr);
+                    arrayPrint.printResultSortArray(arr2);
                 }
                 break;
                 case 13: {

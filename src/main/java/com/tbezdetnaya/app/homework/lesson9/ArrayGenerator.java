@@ -4,14 +4,7 @@ package com.tbezdetnaya.app.homework.lesson9;
  * Created by tanya on 05.12.2016.
  */
 public class ArrayGenerator {
-    public int [] createRandomArray (){
-        int arr[] = new int[10];
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = (int) (Math.random() * 100);
-        }
-        return arr;
 
-    }
     public int[][] createMultiDimentionalArray(){
         int arr[][] = new int[5][8];
         for (int i = 0; i < arr.length; i++) {
@@ -21,7 +14,7 @@ public class ArrayGenerator {
         }
         return arr;
     }
-    public Integer[] creatIntegerRandomArray (){
+    public Integer[] creatRandomArray (){
         Integer arr[] = new Integer[10];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = (int) (Math.random() * 100);

@@ -13,27 +13,27 @@ public class OperationswWithArraysTest {
 
     @Test
     public void testArraySortAscend() throws Exception {
-        int [] arr = {2, 10, 72, 2, 9, 40, 48, 5, 5, 49 };
-        int [] expected ={2, 2, 5, 5, 9, 10, 40, 48, 49, 72};
-        int [] result = operationsWithArrays.arraySortAscending(arr);
+        Integer[] arr = {2, 10, 72, 2, 9, 40, 48, 5, 5, 49 };
+        Integer[] expected ={2, 2, 5, 5, 9, 10, 40, 48, 49, 72};
+        Integer[] result = operationsWithArrays.arraySortAscending(arr);
         Assert.assertArrayEquals(expected,result);
 
     }
 
     @Test
     public void testArraySortDecrease() throws Exception {
-        int [] arr = {2, 10, 72, 2, 9, 40, 48, 5, 5, 49 };
-        int [] expected ={72, 49, 48, 40, 10, 9, 5, 5, 2, 2};
-        int [] result = operationsWithArrays.arraySortDecrease(arr);
+        Integer[] arr = {2, 10, 72, 2, 9, 40, 48, 5, 5, 49 };
+        Integer[] expected ={72, 49, 48, 40, 10, 9, 5, 5, 2, 2};
+        Integer[] result = operationsWithArrays.arraySortDecrease(arr);
         Assert.assertArrayEquals(expected,result);
 
     }
 
     @Test
     public void testSortArrayAscend() throws Exception {
-        int [] arr = {62, 92, 43, 3, 75, 45, 43, 40, 76, 3 };
-        int [] expected ={3, 3, 40, 43, 43, 45, 62, 75, 76, 92};
-        int [] result = operationsWithArrays.sortArrayAscending(arr);
+        Integer[] arr = {62, 92, 43, 3, 75, 45, 43, 40, 76, 3 };
+        Integer[] expected ={3, 3, 40, 43, 43, 45, 62, 75, 76, 92};
+        Integer[] result = operationsWithArrays.sortArrayAscending(arr);
         Assert.assertArrayEquals(expected,result);
 
     }
@@ -49,9 +49,9 @@ public class OperationswWithArraysTest {
 
     @Test
     public void testSelectionSortArray()throws Exception{
-        int [] arr = {18, 53, 5, 6, 22, 14, 60, 11, 42, 27 };
-        int [] expected = {5, 6, 11, 14, 18, 22, 27, 42, 53, 60 };
-        int [] result = operationsWithArrays.selectionSortArray(arr);
+        Integer[] arr = {18, 53, 5, 6, 22, 14, 60, 11, 42, 27 };
+        Integer[] expected = {5, 6, 11, 14, 18, 22, 27, 42, 53, 60 };
+        Integer[] result = operationsWithArrays.selectionSortArray(arr);
         Assert.assertArrayEquals(expected,result);
 
     }
