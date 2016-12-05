@@ -56,7 +56,7 @@ public class Lesson9Runner {
                 case 12: arrayPrint.printResultSelectionSortArray();
                     break;
                 default:
-                    System.out.println("Error: invalide value");
+                    System.out.println("Error: invalid value");
 
             }
         } while (Validation.needContinue());
