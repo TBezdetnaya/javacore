@@ -1,10 +1,9 @@
 package com.tbezdetnaya.runners.homework;
 
 import com.tbezdetnaya.app.homework.lesson9.ArrayGenerator;
-import com.tbezdetnaya.app.homework.lesson9.ArrayPrint;
 import com.tbezdetnaya.app.homework.lesson7.LoopArrays;
 import com.tbezdetnaya.app.homework.lesson7.Validation;
-import com.tbezdetnaya.app.homework.lesson9.OperationsWithArrays;
+import com.tbezdetnaya.app.homework.lesson9.ArrayUtils;
 
 import java.util.Scanner;
 
@@ -14,9 +13,9 @@ import java.util.Scanner;
 public class Lesson9Runner {
     public static void main(String[] args) {
         LoopArrays loopArrays = new LoopArrays();
-        ArrayPrint arrayPrint = new ArrayPrint();
+        ArrayUtils arrayUtils = new ArrayUtils();
         ArrayGenerator arrayGenerator = new ArrayGenerator();
-        OperationsWithArrays operationsWithArrays = new OperationsWithArrays();
+        ArrayUtils operationsWithArrays = new ArrayUtils();
         Scanner sc = new Scanner(System.in);
 
         do {
@@ -29,10 +28,10 @@ public class Lesson9Runner {
             System.out.println("5 - to create a two-dimensional array with 8 lines for 5 columns from random whole numbers from a segment[10;99]");
             System.out.println("6 - to create a two-dimensional array with 8 lines for 5 columns from random whole numbers from a segment[1;999]");
             System.out.println("7 - to execute a task №7");
-            System.out.println("8 or 9 - sorts the specified array into ascending numerical order.");
-            System.out.println("10 or 11 - sorts the specified array into decrease number ");
-            System.out.println("12 - selection sorts the specified array.");
-            System.out.println("13 - to create a two-dimensional array from a segment [-99; 99].");
+            System.out.println("8  - sorts the specified array into ascending numerical order.");
+            System.out.println("9 - sorts the specified array into decrease number ");
+            System.out.println("10 - selection sorts the specified array.");
+            System.out.println("11 - to create a two-dimensional array from a segment [-99; 99].");
             System.out.println(">");
 
             switch (sc.nextInt()) {
@@ -57,47 +56,29 @@ public class Lesson9Runner {
                 case 7:
                     loopArrays.sumOfNumbers();
                     break;
+
                 case 8: {
-                    Integer[] arr = arrayGenerator.creatRandomArray();
-                    arrayPrint.printArray(arr);
-                    Integer[] arr2 = operationsWithArrays.arraySortAscending(arr);
-                    arrayPrint.printResultSortArray(arr2);
-                }
-                break;
-                case 9: {
-                    Integer[] arr = arrayGenerator.creatRandomArray();
-                    arrayPrint.printArray(arr);
-                    Integer[] arr2 = operationsWithArrays.sortArrayAscending(arr);
-                    arrayPrint.printResultSortArray(arr2);
+                    Integer[] arr = arrayGenerator.createRandomArray();
+                    operationsWithArrays.arrayBubbleSortAscending(arr);
                 }
                 break;
 
+                case 9: {
+                    Integer[] arr = arrayGenerator.createRandomArray();
+                    operationsWithArrays.arrayBubbleSortDecrease(arr);
+
+                }
+                break;
                 case 10: {
-                    Integer[] arr = arrayGenerator.creatRandomArray();
-                    arrayPrint.printArray(arr);
-                    Integer[] arr2 = operationsWithArrays.sortIntegerArrayDecrease(arr);
-                    arrayPrint.printResultSortArray(arr2);
+                    Integer[] arr = arrayGenerator.createRandomArray();
+                    operationsWithArrays.selectionSortArray(arr);
+
                 }
                 break;
+
                 case 11: {
-                    Integer[] arr = arrayGenerator.creatRandomArray();
-                    arrayPrint.printArray(arr);
-                    Integer[] arr2 = operationsWithArrays.arraySortDecrease(arr);
-                    arrayPrint.printResultSortArray(arr2);
-                }
-                break;
-                case 12: {
-                    Integer[] arr = arrayGenerator.creatRandomArray();
-                    arrayPrint.printArray(arr);
-                    Integer[] arr2 = operationsWithArrays.selectionSortArray(arr);
-                    arrayPrint.printResultSortArray(arr2);
-                }
-                break;
-                case 13: {
                     int[][] arr = arrayGenerator.createMultiDimentionalArray();
-                    arrayPrint.printMultiDimentionalArray(arr);
-                    int max = operationsWithArrays.searchMaxNumberArray(arr);
-                    arrayPrint.printResultSearchMaxNumberArray(max);
+                    operationsWithArrays.searchMaxNumberArray(arr);
                 }
                 break;
                 default:
