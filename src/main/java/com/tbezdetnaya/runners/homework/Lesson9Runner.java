@@ -13,7 +13,6 @@ import java.util.Scanner;
 public class Lesson9Runner {
     public static void main(String[] args) {
         LoopArrays loopArrays = new LoopArrays();
-        ArrayUtils arrayUtils = new ArrayUtils();
         ArrayGenerator arrayGenerator = new ArrayGenerator();
         ArrayUtils operationsWithArrays = new ArrayUtils();
         Scanner sc = new Scanner(System.in);
@@ -66,13 +65,11 @@ public class Lesson9Runner {
                 case 9: {
                     Integer[] arr = arrayGenerator.createRandomArray();
                     operationsWithArrays.arrayBubbleSortDecrease(arr);
-
                 }
                 break;
                 case 10: {
                     Integer[] arr = arrayGenerator.createRandomArray();
                     operationsWithArrays.selectionSortArray(arr);
-
                 }
                 break;
 
