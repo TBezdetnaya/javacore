@@ -77,6 +77,17 @@ public class ArrayUtils {
         return max;
 
     }
+    public int countArray (int[][] sourseArr){
+        int countArray = 0;
+        int[][] arr = sourseArr.clone();
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                countArray++;
+            }
+        }
+        System.out.println(countArray);
+        return countArray;
+    }
 
     // сортировка средствами Java
 
@@ -92,16 +103,6 @@ public class ArrayUtils {
         return arr;
     }
 
-    public int countArray (int[][] sourseArr){
-        int countArray = 0;
-        int[][] arr = sourseArr.clone();
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-                countArray++;
-            }
-        }
-        System.out.println(countArray);
-        return countArray;
-    }
+
 
 }

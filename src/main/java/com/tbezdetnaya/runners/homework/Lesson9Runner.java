@@ -57,18 +57,18 @@ public class Lesson9Runner {
                     break;
 
                 case 8: {
-                    Integer[] arr = arrayGenerator.createRandomArray();
+                    Integer[] arr = arrayGenerator.createArray();
                     operationsWithArrays.arrayBubbleSortAscending(arr);
                 }
                 break;
 
                 case 9: {
-                    Integer[] arr = arrayGenerator.createRandomArray();
+                    Integer[] arr = arrayGenerator.createArray();
                     operationsWithArrays.arrayBubbleSortDecrease(arr);
                 }
                 break;
                 case 10: {
-                    Integer[] arr = arrayGenerator.createRandomArray();
+                    Integer[] arr = arrayGenerator.createArray();
                     operationsWithArrays.selectionSortArray(arr);
                 }
                 break;
@@ -77,6 +77,7 @@ public class Lesson9Runner {
                     int[][] arr = arrayGenerator.createMultiDimentionalArray();
                     operationsWithArrays.searchMaxNumberArray(arr);
                 }
+
                 break;
                 default:
                     System.out.println("Error: invalid value");

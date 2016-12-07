@@ -19,14 +19,14 @@ public class ArrayGeneratorTest {
     @Test
     public void testVerifyArrayLength() throws Exception {
         int expected = 10;
-        Integer []arr = arrayGenerator.createRandomArray();
+        Integer []arr = arrayGenerator.createArray();
         int result = arr.length;
         Assert.assertEquals(expected, result);
 
     }
     @Test
     public void testVerifyArrayNotNull()throws Exception{
-        Assert.assertNotNull(arrayGenerator.createRandomArray());
+        Assert.assertNotNull(arrayGenerator.createArray());
     }
     @Test
     public void testVerifyMultiDimentionalArrayNotNull()throws Exception{

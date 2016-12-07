@@ -17,12 +17,14 @@ public class ArrayGenerator {
         }
         return arr;
     }
-    public Integer[] createRandomArray (){
+    public Integer[] createArray (){
         Integer arr[] = new Integer[n];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = (int) (Math.random() * 100);
         }
         return arr;
     }
+
+
 
 }
