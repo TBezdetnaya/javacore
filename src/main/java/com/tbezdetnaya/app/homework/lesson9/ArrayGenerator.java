@@ -8,19 +8,15 @@ public class ArrayGenerator {
    private int a = 5;
    private int b = 8;
 
-
     public int[][] createMultiDimentionalArray(){
         int arr[][] = new int[a][b];
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
                 arr[i][j] = (int) (Math.random() * 199) - 99;
-
-
             }
         }
         return arr;
     }
-
     public Integer[] createRandomArray (){
         Integer arr[] = new Integer[n];
         for (int i = 0; i < arr.length; i++) {
@@ -28,6 +24,5 @@ public class ArrayGenerator {
         }
         return arr;
     }
-
 
 }
