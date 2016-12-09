@@ -3,11 +3,6 @@ package com.tbezdetnaya.app.homework.lesson10;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-/**
- * Created by tanya on 09.12.2016.
- */
 public class PalindrameSearchTest {
     PalindrameSearch palindrameSearch = new PalindrameSearch();
     String positive = "1221";

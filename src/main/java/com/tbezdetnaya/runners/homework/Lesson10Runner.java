@@ -17,19 +17,19 @@ public class Lesson10Runner {
                 switch (sc.nextInt()) {
                     case 1:
 
-                        System.out.println("Input some string");
+                        System.out.println("Type a string");
                         palindrameSearch.isPalindromeEven(sc.next());
                         break;
                     case 2:
-                        System.out.println("Input some string");
+                        System.out.println("Type a string");
                         palindrameSearch.isPalindromeEvenOdd(sc.next());
                         break;
                     case 3:
-                        System.out.println("Input some string");
+                        System.out.println("Type a string");
                       palindrameSearch.isPalindromeReverseString(sc.next());
                         break;
                     case 4:
-                        System.out.println("Input some string");
+                        System.out.println("Type a few words separated by commas");
                         palindrameSearch.isPalindrameArray(sc.next());
                         break;
                 }
