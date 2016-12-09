@@ -44,9 +44,9 @@ public class PalindrameSearch {
     }
 
     public boolean isPalindrameArray(String s) {
-        String[] pal = s.split(",");
-        for (int i = 0; i < pal.length; i++) {
-            isPalindromeEvenOdd(pal[i]);
+        String[] palindrome = s.split(",");
+        for (int i = 0; i < palindrome.length; i++) {
+            isPalindromeEvenOdd(palindrome[i]);
 
         }
         return true;
