@@ -23,7 +23,7 @@ public class PalindrameSearch {
 
         String palindrome = s.toLowerCase();
         for (int i = 0; i < palindrome.length(); i++) {
-            if (palindrome.charAt(i) != palindrome.toLowerCase().charAt(palindrome.length() - i - 1)) {
+            if (palindrome.charAt(i) != palindrome.charAt(palindrome.length() - i - 1)) {
                 System.out.println("Is not palindrome " + "- " + palindrome);
                 return false;
             }
