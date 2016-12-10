@@ -32,6 +32,12 @@ public class Lesson10Runner {
                         System.out.println("Type a few words separated by commas");
                         palindrameSearch.isPalindrameArray(sc.next());
                         break;
+                    case 5:
+                        sc.useDelimiter("\n"); //установим разделителем символ перехода на новую строку
+                        System.out.println("Type a few words separated by commas");
+                        palindrameSearch.isPalindrameArrayString(sc.next());
+                        break;
+
                 }
 
             } catch (Exception e) {

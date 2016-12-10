@@ -52,6 +52,22 @@ public class PalindrameSearch {
         return true;
 
     }
+
+    public  boolean isPalindrameArrayString(String s) {
+        String input = s.toLowerCase();
+        for (int i = 0; i < input.length(); i++) {
+            String reserve = new StringBuffer(input).reverse().toString();
+            if (reserve.equals(input)) {
+                System.out.println("It is palindrome " + "- " + input);
+                return true;
+            }
+            System.out.println("Is Not palindrome " + "- " + input);
+            return false;
+        }
+        return false;
+
+
+    }
 }
 
 
