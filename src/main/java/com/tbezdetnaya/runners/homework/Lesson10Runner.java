@@ -10,7 +10,6 @@ public class Lesson10Runner {
     public static void main(String[] args) {
         PalindrameSearch palindrameSearch = new PalindrameSearch();
         Scanner sc = new Scanner(System.in);
-
         do {
             System.out.println("Welcome! This application checks the line to palindrome. Enter a number to begin the work:");
             try {
@@ -37,7 +36,6 @@ public class Lesson10Runner {
                         System.out.println("Type a few words separated by commas");
                         palindrameSearch.isPalindrameArrayString(sc.next());
                         break;
-
                 }
 
             } catch (Exception e) {
@@ -45,7 +43,6 @@ public class Lesson10Runner {
             }
 
         } while (Validation.needContinue());
-
 
     }
 }
