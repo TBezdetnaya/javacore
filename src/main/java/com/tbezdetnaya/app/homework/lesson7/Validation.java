@@ -19,8 +19,8 @@ public class Validation {
         boolean res = false;
         do {
             isInputValueCorrect = false;
-            System.out.println("-----------------------");
-            System.out.print("Exit the program? (yes/no)");
+            System.out.println("\n" + "-----------------------");
+            System.out.println("Exit the program? (yes/no)");
             System.out.println("> ");
 
             answer = sc.next();
@@ -28,14 +28,35 @@ public class Validation {
                 isInputValueCorrect = true;
             } else {
                 System.out.println("Error: invalid value");
+
             }
 
             if (answer.equals("no")) {
                 sc.nextLine();
                 res = true;
             }
+
         } while (!isInputValueCorrect);
         return res;
+    }
+
+    public static boolean checkDelemiter(){
+        String operator;
+        boolean isInputValueCorrect;
+        do {
+            isInputValueCorrect = false;
+            System.out.println("Specify separator:");
+            System.out.print("> ");
+            operator = sc.next();
+            if(operator.equals(",")||operator.equals(";")){
+                isInputValueCorrect = true;
+            }else{
+                System.out.println("ERROR. Incorrect input value for delimiter.");
+            }
+
+        }while (!isInputValueCorrect);
+         return isInputValueCorrect;
+
     }
 
 

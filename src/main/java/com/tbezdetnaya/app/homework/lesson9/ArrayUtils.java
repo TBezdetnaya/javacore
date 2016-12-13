@@ -1,4 +1,6 @@
 package com.tbezdetnaya.app.homework.lesson9;
+import com.sun.javafx.binding.StringFormatter;
+
 import java.util.Arrays;
 import java.util.Collections;
 
@@ -6,13 +8,13 @@ import java.util.Collections;
  * Created by Tanya on 03.12.2016.
  */
 public class ArrayUtils {
-    public Integer[] arrayBubbleSortAscending(Integer[] sourceArr) {
-        Integer[] arr = sourceArr.clone();
+    public double[] arrayBubbleSortAscending(double[] sourceArr) {
+        double[] arr = sourceArr.clone();
         System.out.println("Source array" + Arrays.toString(arr) + "\n" + "will be sorted using bubble sort");
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length - 1; j++) {
                 if (arr[j] > arr[j + 1]) {
-                    int tmp = arr[j];
+                    double tmp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = tmp;
 
@@ -23,13 +25,13 @@ public class ArrayUtils {
         return arr;
     }
 
-    public Integer[] arrayBubbleSortDecrease(Integer[] sourceArr) {
-        Integer[] arr = sourceArr.clone();
+    public double[] arrayBubbleSortDecrease(double[] sourceArr) {
+        double[] arr = sourceArr.clone();
         System.out.println("Source array" + Arrays.toString(arr) + "\n" + "will be sorted using bubble sort");
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length - 1; j++) {
                 if (arr[j] < arr[j + 1]) {
-                    int tmp = arr[j];
+                    double tmp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = tmp;
                 }
@@ -39,13 +41,13 @@ public class ArrayUtils {
         return arr;
     }
 
-    public Integer[] selectionSortArray(Integer[] sourseArr) {
-        Integer[] arr = sourseArr.clone();
+    public double[] selectionSortArray(double[] sourseArr) {
+        double[] arr = sourseArr.clone();
         System.out.println("Source array" + Arrays.toString(arr)+ "\n" + "will be sorted using selection sort");
         for (int i = 0; i < arr.length; i++) {
             for (int j = i + 1; j < arr.length; j++) {
                 if (arr[j] < arr[i]) {
-                    int temp = arr[j];
+                    double temp = arr[j];
                     arr[j] = arr[i];
                     arr[i] = temp;
                 }

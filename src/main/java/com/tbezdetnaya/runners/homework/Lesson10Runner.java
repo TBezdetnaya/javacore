@@ -15,7 +15,6 @@ public class Lesson10Runner {
             try {
                 switch (sc.nextInt()) {
                     case 1:
-
                         System.out.println("Type a string");
                         palindrameSearch.isPalindromeEven(sc.next());
                         break;

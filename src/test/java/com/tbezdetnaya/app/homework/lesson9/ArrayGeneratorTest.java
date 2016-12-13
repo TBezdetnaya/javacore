@@ -19,7 +19,7 @@ public class ArrayGeneratorTest {
     @Test
     public void testVerifyArrayLength() throws Exception {
         int expected = 10;
-        Integer []arr = arrayGenerator.createArray();
+        double []arr = arrayGenerator.createArray();
         int result = arr.length;
         Assert.assertEquals(expected, result);
 

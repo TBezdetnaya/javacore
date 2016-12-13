@@ -10,9 +10,12 @@ import static org.junit.Assert.*;
  */
 public class ArrayUtilsTest {
     ArrayUtils arrayUtils = new ArrayUtils();
-    Integer[] arr = {2, 10, 72, 2, 9, 40, 48, 5, 5, 49 };
-    Integer[] expectedAscending = {2, 2, 5, 5, 9, 10, 40, 48, 49, 72};
-    Integer[] expectedDecrease = {72, 49, 48, 40, 10, 9, 5, 5, 2, 2};
+    double[] arr = {2, 10, 72, 2, 9, 40, 48, 5, 5, 49 };
+    double[] expectedAscending = {2, 2, 5, 5, 9, 10, 40, 48, 49, 72};
+    double[] expectedDecrease = {72, 49, 48, 40, 10, 9, 5, 5, 2, 2};
+    Integer[] expectedAscendingInt = {2, 2, 5, 5, 9, 10, 40, 48, 49, 72};
+    Integer[] expectedDecreaseInt = {72, 49, 48, 40, 10, 9, 5, 5, 2, 2};
+    Integer[] arrInt = {2, 10, 72, 2, 9, 40, 48, 5, 5, 49 };
     int array [][]=  {{-9,1,0},
                      {4,1,1},
                      {-2,2,-1}};
@@ -21,20 +24,20 @@ public class ArrayUtilsTest {
 
     @Test
     public void testArrayBubbleSortAscending() throws Exception {
-        Integer[] result = arrayUtils.arrayBubbleSortAscending(arr);
-        Assert.assertArrayEquals(expectedAscending,result);
+        double[] result = arrayUtils.arrayBubbleSortAscending(arr);
+        Assert.assertArrayEquals(expectedAscending,result,0);
     }
 
     @Test
     public void testArrayBubbleSortDecrease() throws Exception {
-        Integer[] result = arrayUtils.arrayBubbleSortDecrease(arr);
-        Assert.assertArrayEquals(expectedDecrease,result);
+        double[] result = arrayUtils.arrayBubbleSortDecrease(arr);
+        Assert.assertArrayEquals(expectedDecrease,result,0);
     }
 
     @Test
     public void testSelectionSortArray() throws Exception {
-        Integer[] result = arrayUtils.selectionSortArray(arr);
-        Assert.assertArrayEquals(expectedAscending,result);
+        double[] result = arrayUtils.selectionSortArray(arr);
+        Assert.assertArrayEquals(expectedAscending,result,0);
     }
 
     @Test
@@ -45,14 +48,14 @@ public class ArrayUtilsTest {
 
     @Test
     public void testSortArrayAscending() throws Exception {
-        Integer[] result = arrayUtils.sortArrayAscending(arr);
-        Assert.assertArrayEquals(expectedAscending,result);
+        Integer[] result = arrayUtils.sortArrayAscending(arrInt);
+        Assert.assertArrayEquals(expectedAscendingInt,result);
     }
 
     @Test
     public void testSortArrayDecrease() throws Exception {
-        Integer result[] = arrayUtils.sortArrayDecrease(arr);
-        Assert.assertArrayEquals(expectedDecrease,result);
+        Integer result[] = arrayUtils.sortArrayDecrease(arrInt);
+        Assert.assertArrayEquals(expectedDecreaseInt,result);
 
     }
 }

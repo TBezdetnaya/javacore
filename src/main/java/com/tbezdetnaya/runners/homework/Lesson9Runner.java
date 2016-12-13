@@ -57,18 +57,18 @@ public class Lesson9Runner {
                     break;
 
                 case 8: {
-                    Integer[] arr = arrayGenerator.createArray();
+                    double[] arr = arrayGenerator.createArray();
                     operationsWithArrays.arrayBubbleSortAscending(arr);
                 }
                 break;
 
                 case 9: {
-                    Integer[] arr = arrayGenerator.createArray();
+                    double[] arr = arrayGenerator.createArray();
                     operationsWithArrays.arrayBubbleSortDecrease(arr);
                 }
                 break;
                 case 10: {
-                    Integer[] arr = arrayGenerator.createArray();
+                    double[] arr = arrayGenerator.createArray();
                     operationsWithArrays.selectionSortArray(arr);
                 }
                 break;
