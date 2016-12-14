@@ -16,7 +16,7 @@ public class ArrayParse {
     }
     public String[] getArrayOnlyLetters (String a){
         StringBuilder builder = new StringBuilder(a);
-        String[] splitStringArray = builder.toString().split("[\\d,;.| |]");
+        String[] splitStringArray = builder.toString().split("[\\d,;.| |/]");
         for (int i = 0; i <splitStringArray.length ; i++) {
             System.out.print( splitStringArray[i]);
         }
