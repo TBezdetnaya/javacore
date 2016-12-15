@@ -27,7 +27,7 @@ public class ArrayParse {
 
     public String[] getArrayString(String a, String keyWord){
         StringBuilder builder = new StringBuilder(a);
-        String [] splitStringArray = new String[a.length()];
+        String [] splitStringArray = new String[1];
         if (!keyWord.equals("")){
             splitStringArray = builder.toString().split(keyWord);
         } else {
@@ -36,7 +36,8 @@ public class ArrayParse {
         for (int i = 0; i < splitStringArray.length ; i++) {
             System.out.println(splitStringArray[i]);
         }
-        return splitStringArray;
+
+        return splitStringArray; 
 
     }
 
