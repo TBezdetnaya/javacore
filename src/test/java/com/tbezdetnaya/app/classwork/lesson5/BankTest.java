@@ -1,5 +1,7 @@
 package com.tbezdetnaya.app.classwork.lesson5;
 
+import com.tbezdetnaya.app.classWork.lesson5.Bank;
+import com.tbezdetnaya.app.classWork.lesson5.Person;
 import org.junit.*;
 import org.junit.runners.MethodSorters;
 

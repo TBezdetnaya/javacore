@@ -10,6 +10,7 @@ public class ArrayParse {
         double[] arr = new double[splitStringArray.length];
         for (int i = 0; i < splitStringArray.length; i++) {
           arr[i] = Double.parseDouble(splitStringArray[i]);
+            System.out.println(splitStringArray);
         }
         return arr;
 
@@ -37,7 +38,7 @@ public class ArrayParse {
             System.out.println(splitStringArray[i]);
         }
 
-        return splitStringArray; 
+        return splitStringArray;
 
     }
 
