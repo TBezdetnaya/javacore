@@ -15,7 +15,7 @@ public class FileUtils {
 
 
     public double[] readFileNumber ()throws IOException{
-        BufferedReader reader = new BufferedReader(new FileReader("G:\\Project\\javacore\\src\\main\\resources\\ArrayData.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("E:\\Project\\javacore\\src\\main\\resources\\ArrayData.txt"));
         String line;
 
         double[] arr = new double[0];
@@ -37,8 +37,8 @@ public class FileUtils {
 
     public double[] writeFileNumber(double[] sourceArr) throws IOException{
         double[] arr = sourceArr.clone();
-        BufferedWriter writer = new BufferedWriter(new FileWriter("G:\\Project\\javacore\\src\\main\\resources\\ArrayWrite.txt"));
-        writer.write(Arrays.toString(arr));
+        BufferedWriter writer = new BufferedWriter(new FileWriter("E:\\Project\\javacore\\src\\main\\resources\\ArrayWrite.txt"));
+        writer.write(Arrays.toString(arr).replace("[","").replace("]", ""));
 
         writer.close();
         return arr;
