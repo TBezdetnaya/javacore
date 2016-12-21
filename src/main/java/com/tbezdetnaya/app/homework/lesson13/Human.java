@@ -7,12 +7,10 @@ public class Human {
     private String name;
     private int age;
 
-    public Human(String name, int age){
+    public Human(String name, int age) {
         checkAge(age);
         this.name = name;
         this.age = age;
-
-
     }
 
     public int getAge() {
@@ -24,19 +22,16 @@ public class Human {
     }
 
     public void setAge(int age) {
-        if (checkAge (age)){
+        if (checkAge(age)) {
             this.age = age;
         }
 
     }
 
-    public boolean checkAge (int age){
-        String result = (age >= 1 && age < 120)? "New age setted: " + age : "Age invalid";
+    public boolean checkAge(int age) {
+        String result = (age >= 1 && age < 120) ? "New age setted: " + age : "Age invalid";
         System.out.println(result);
         return true;
     }
-
-
-
 
 }
