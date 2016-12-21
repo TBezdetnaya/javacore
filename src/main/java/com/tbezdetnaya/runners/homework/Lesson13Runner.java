@@ -8,7 +8,7 @@ public class Lesson13Runner {
     public static void main(String[] args) {
 
 
-        WhiteCollar collar = new WhiteCollar("Yoko", 23,"Gonzo");
+        WhiteCollar collar = new WhiteCollar("Yoko", 23,"Gonzo - Inc");
         System.out.println("Name: " + collar.getName());
 
 
