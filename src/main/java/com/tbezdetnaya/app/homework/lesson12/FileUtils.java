@@ -15,7 +15,7 @@ public class FileUtils {
 
 
     public double[] readFileNumber ()throws IOException{
-        BufferedReader reader = new BufferedReader(new FileReader("E:\\Project\\javacore\\src\\main\\resources\\ArrayData.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("D:\\Project\\javacore\\src\\main\\resources\\ArrayData.txt"));
         String line;
 
         double[] arr = new double[0];
@@ -37,7 +37,7 @@ public class FileUtils {
 
     public double[] writeFileNumber(double[] sourceArr) throws IOException{
         double[] arr = sourceArr.clone();
-        BufferedWriter writer = new BufferedWriter(new FileWriter("E:\\Project\\javacore\\src\\main\\resources\\ArrayWrite.txt"));
+        BufferedWriter writer = new BufferedWriter(new FileWriter("D:\\Project\\javacore\\src\\main\\resources\\ArrayWrite.txt"));
         writer.write(Arrays.toString(arr).replace("[","").replace("]", ""));
 
         writer.close();
@@ -45,7 +45,7 @@ public class FileUtils {
 
     }
     public String[] readFileWord()throws IOException{
-        BufferedReader reader = new BufferedReader(new FileReader("\\src\\main\\resources\\ArrayWordData.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("D:\\Project\\javacore\\src\\main\\resources\\ArrayWordData.txt"));
         String line;
         ArrayList<String> arrList = new ArrayList<>();
         while ((line = reader.readLine()) != null) {
@@ -60,16 +60,10 @@ public class FileUtils {
     }
     public String[] writeFileWord(String[] sourceArr) throws IOException{
         String[] arr = sourceArr.clone();
-        BufferedWriter writer = new BufferedWriter(new FileWriter("G:\\Project\\javacore\\src\\main\\resources\\ArrayWrite_word.txt"));
+        BufferedWriter writer = new BufferedWriter(new FileWriter("D:\\Project\\javacore\\src\\main\\resources\\ArrayWrite_word.txt"));
         for (int i = 0; i < arr.length; i++) {
-
-
-            writer.write("It is ");
-            if (!palindrom.isPalindrameArrayString(arr[i])) {
-                writer.write("Not");
-            }
-            writer.write(" palindrome - ");
-            writer.write(arr[i]);
+            String result = palindrom.isPalindrameArrayString(arr[i])? "It is palindrome " + arr[i]: "It is not palindrome " + arr[i];
+            writer.write(result);
             writer.write(System.lineSeparator());
 
         }

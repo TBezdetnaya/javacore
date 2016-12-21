@@ -6,7 +6,12 @@ package com.tbezdetnaya.app.homework.lesson13;
 public class Human {
     private String name;
     private int age;
+
     public Human(String name, int age){
+        checkAge(age);
+        this.name = name;
+        this.age = age;
+
 
     }
 
@@ -19,17 +24,19 @@ public class Human {
     }
 
     public void setAge(int age) {
-        this.age = age;
+        if (checkAge (age)){
+            this.age = age;
+        }
+
     }
 
-   public boolean checkAge () {
-       if (getAge() >= 1 && getAge() < 120){
-           System.out.println("New age setted");
-           return true;
-       }else {
-           System.out.println("Age invalid");
-           return false;
-       }
+    public boolean checkAge (int age){
+        String result = (age >= 1 && age < 120)? "New age setted: " + age : "Age invalid";
+        System.out.println(result);
+        return true;
+    }
 
-   }
+
+
+
 }
