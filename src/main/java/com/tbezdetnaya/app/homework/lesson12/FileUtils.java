@@ -11,7 +11,7 @@ import java.util.Arrays;
  * Created by Tanya on 16.12.2016.
  */
 public class FileUtils {
-    PalindrameSearch palindrame = new PalindrameSearch();
+    PalindrameSearch palindrome = new PalindrameSearch();
 
 
     public double[] readFileNumber ()throws IOException{
@@ -60,7 +60,7 @@ public class FileUtils {
         String[] arr = sourceArr.clone();
         BufferedWriter writer = new BufferedWriter(new FileWriter("D:\\Project\\javacore\\src\\main\\resources\\ArrayWrite_word.txt"));
         for (int i = 0; i < arr.length; i++) {
-            String result = palindrame.isPalindrameArrayString(arr[i])? "It is palindrome " + arr[i]: "It is not palindrome " + arr[i];
+            String result = palindrome.isPalindrameArrayString(arr[i])? "It is palindrome " + arr[i]: "It is not palindrome " + arr[i];
             writer.write(result);
             writer.write(System.lineSeparator());
 
