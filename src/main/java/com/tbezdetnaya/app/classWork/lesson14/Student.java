@@ -14,8 +14,9 @@ public class Student extends Person {
     public String getResponse (String question){
         return response;
     }
+    @Override
     public String toString (){
-        return  getName()+ " " + university + "\n " + response ;
+        return  getName()+ " " + university + "\n" + response ;
     }
 
 }
