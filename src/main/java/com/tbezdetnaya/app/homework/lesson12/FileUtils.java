@@ -90,7 +90,7 @@ public class FileUtils {
         return s;
     }
     public boolean readerWriteKeyValue ()throws IOException{
-        System.out.println("Specify the key and its value, separated by commas");
+        System.out.println("Specify the key and its value, separated by commas. On completion enter an empty string.");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter writer = new BufferedWriter(new FileWriter("D:/Project/javacore/src/main/resources/properties file.txt"));
 
