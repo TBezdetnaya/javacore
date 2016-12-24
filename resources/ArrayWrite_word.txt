@@ -1,4 +1,4 @@
-It is palindrome moom
+It is not palindrome moon
 It is not palindrome word
 It is palindrome noon
 It is palindrome ere

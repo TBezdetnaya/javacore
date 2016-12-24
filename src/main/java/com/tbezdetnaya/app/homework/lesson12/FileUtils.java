@@ -11,17 +11,17 @@ import java.util.Arrays;
  * Created by Tanya on 16.12.2016.
  */
 public class FileUtils {
-    private String dirReaderFileNumber ="D:\\Project\\javacore\\src\\main\\resources\\ArrayData.txt";
-    private String dirWriteFileNumber = "D:\\Project\\javacore\\src\\main\\resources\\ArrayWrite.txt";
-    private String dirReaderFileWord = "D:\\Project\\javacore\\src\\main\\resources\\ArrayWordData.txt";
-    private String dirWriteFileWord = "D:\\Project\\javacore\\src\\main\\resources\\ArrayWrite_word.txt";
-    private String dirFileProperties = "D:/Project/javacore/src/main/resources/properties file.txt";
-    private String dirFile = "D:/Project/javacore/src/main/resources/";
+    private String arrayData ="resources/ArrayData.txt";
+    private String writeArrayData = "resources/ArrayWrite.txt";
+    private String arrayData1 = "resources/ArrayWordData.txt";
+    private String writeArrayData1 = "resources/ArrayWrite_word.txt";
+    private String propertiesFile = "resources/properties file.txt";
+    private String dirFile = "resources/";
     PalindrameSearch palindrome = new PalindrameSearch();
 
 
     public double[] readFileNumber ()throws IOException{
-        BufferedReader reader = new BufferedReader(new FileReader(dirReaderFileNumber));
+        BufferedReader reader = new BufferedReader(new FileReader(arrayData));
         String line;
         double[] arr = new double[0];
         while ((line = reader.readLine()) != null) {
@@ -39,17 +39,16 @@ public class FileUtils {
 
     }
 
-    public double[] writeFileNumber(double[] sourceArr) throws IOException{
+    public void writeFileNumber(double[] sourceArr) throws IOException{
         double[] arr = sourceArr.clone();
-        BufferedWriter writer = new BufferedWriter(new FileWriter(dirWriteFileNumber));
+        BufferedWriter writer = new BufferedWriter(new FileWriter(writeArrayData));
         writer.write(Arrays.toString(arr).replace("[","").replace("]", ""));
 
         writer.close();
-        return arr;
 
     }
     public String[] readFileWord()throws IOException{
-        BufferedReader reader = new BufferedReader(new FileReader(dirReaderFileWord));
+        BufferedReader reader = new BufferedReader(new FileReader(arrayData1));
         String line;
         ArrayList<String> arrList = new ArrayList<>();
         while ((line = reader.readLine()) != null) {
@@ -62,9 +61,9 @@ public class FileUtils {
         return arr;
 
     }
-    public String[] writeFileWord(String[] sourceArr) throws IOException{
+    public void writeFileWord(String[] sourceArr) throws IOException{
         String[] arr = sourceArr.clone();
-        BufferedWriter writer = new BufferedWriter(new FileWriter(dirWriteFileWord));
+        BufferedWriter writer = new BufferedWriter(new FileWriter(writeArrayData1));
         for (int i = 0; i < arr.length; i++) {
             String result = palindrome.isPalindrameArrayString(arr[i])? "It is palindrome " + arr[i]: "It is not palindrome " + arr[i];
             writer.write(result);
@@ -72,7 +71,7 @@ public class FileUtils {
 
         }
         writer.close();
-        return arr;
+
 
     }
     public String readerWriteConcole () throws IOException{
@@ -98,7 +97,7 @@ public class FileUtils {
     public boolean readerWriteKeyValue ()throws IOException{
         System.out.println("Specify the key and its value, separated by commas. On completion enter an empty string.");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter writer = new BufferedWriter(new FileWriter(dirFileProperties));
+        BufferedWriter writer = new BufferedWriter(new FileWriter(propertiesFile));
 
         ArrayList<String> arrayKey = new ArrayList<>();
         ArrayList<String> arrayValue = new ArrayList<>();
