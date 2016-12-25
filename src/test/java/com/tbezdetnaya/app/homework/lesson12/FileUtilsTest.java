@@ -47,7 +47,7 @@ public class FileUtilsTest {
         String expected = readStandard.readLine();
         BufferedReader readResult = new BufferedReader(new FileReader(writeFileData));
         String result = readResult.readLine();
-        Assert.assertEquals(expected.toString(),result.toString());
+        Assert.assertEquals(expected,result);
 
     }
 }
