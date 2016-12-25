@@ -14,11 +14,14 @@ import static org.junit.Assert.*;
  */
 public class FileUtilsTest {
     FileUtils fileUtils = new FileUtils();
-    private String arrayData = "resources/standard.txt";
+    private String arrayData = "src/test/resources/standard.txt";
     private String writeFileData = "resources/ArrayWrite.txt";
+    private String readFileWord = "src/test/resources/standardFileWord.txt";
+    private String writeFileWord = "resources/ArrayWrite_word.txt";
+
     private  double [] arr = {12.0, 4.0, 67.8, 6.0, 45.0, 5.0, 2.3, 1.0, 0.0};
     private double [] expected = {12, 4, 67.8, 6, 45, 5, 2.3, 1, 0};
-   private String [] expectedS = {"moom", "word", "noon", "ere"};
+    private String [] array = {"moom", "word", "noon", "ere"};
 
 
 
@@ -34,7 +37,7 @@ public class FileUtilsTest {
     public void testReadFileWord() throws Exception {
 
         String [] result = fileUtils.readFileWord();
-        Assert.assertArrayEquals(expectedS,result);
+        Assert.assertArrayEquals(array,result);
 
     }
 
@@ -48,6 +51,19 @@ public class FileUtilsTest {
         BufferedReader readResult = new BufferedReader(new FileReader(writeFileData));
         String result = readResult.readLine();
         Assert.assertEquals(expected,result);
+
+    }
+
+    @Test
+    public void testWriteFileWord() throws Exception {
+        fileUtils.writeFileWord(array);
+        BufferedReader readerStandard = new BufferedReader(new FileReader(readFileWord));
+        String expectedWord = readerStandard.readLine();
+        BufferedReader readResult = new BufferedReader(new FileReader(writeFileWord));
+        String result = readResult.readLine();
+
+        Assert.assertEquals(expectedWord,result);
+
 
     }
 }
