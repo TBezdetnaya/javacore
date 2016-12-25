@@ -74,7 +74,7 @@ public class FileUtils {
 
 
     }
-    public String readerWriteConcole () throws IOException{
+    public void readerWriteConcole () throws IOException{
         System.out.println("Specify file name ....txt");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String s = reader.readLine();
@@ -92,9 +92,9 @@ public class FileUtils {
             writer.write(System.lineSeparator());
         }
         writer.close();
-        return s;
+
     }
-    public boolean readerWriteKeyValue ()throws IOException{
+    public void readerWriteKeyValue ()throws IOException{
         System.out.println("Specify the key and its value, separated by commas. On completion enter an empty string.");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter writer = new BufferedWriter(new FileWriter(propertiesFile));
@@ -125,7 +125,7 @@ public class FileUtils {
 
         }
         writer.close();
-        return true;
+
 
 
     }
