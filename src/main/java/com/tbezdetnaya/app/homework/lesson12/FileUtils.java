@@ -74,7 +74,7 @@ public class FileUtils {
 
 
     }
-    public File creatFile (String s)throws IOException{
+    public File creatFile (String s){
         File file = new File(dirFile,  s);
 
 
