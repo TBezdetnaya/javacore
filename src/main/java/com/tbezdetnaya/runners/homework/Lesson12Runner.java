@@ -5,7 +5,9 @@ import com.tbezdetnaya.app.homework.lesson12.FileUtils;
 import com.tbezdetnaya.app.homework.lesson7.Validation;
 import com.tbezdetnaya.app.homework.lesson9.ArrayUtils;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 /**
@@ -38,7 +40,11 @@ public class Lesson12Runner {
                     }
                     break;
                     case 3:
-                        file.readerWriteConcole();
+                        System.out.println("Specify file name ....txt");
+                        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+                        String s = reader.readLine();
+                        file.writeFile(file.creatFile(s));
+
                         break;
                     case  4:
                         file.readerWriteKeyValue();

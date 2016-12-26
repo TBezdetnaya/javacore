@@ -74,14 +74,17 @@ public class FileUtils {
 
 
     }
-    public void readerWriteConcole () throws IOException{
-        System.out.println("Specify file name ....txt");
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String s = reader.readLine();
+    public File creatFile (String s)throws IOException{
         File file = new File(dirFile,  s);
+
+
+        return file;
+    }
+    public void writeFile (File file) throws IOException{
+
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter writer = new BufferedWriter(new FileWriter(file));
         System.out.println("Specify strings via enter button . On completion select the word \"exit\" ");
-
         while (true){
             String answer = reader.readLine();
             if (answer.equals("exit")){
