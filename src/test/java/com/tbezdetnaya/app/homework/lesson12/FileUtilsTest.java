@@ -13,8 +13,8 @@ public class FileUtilsTest {
     private String writeFileData = "resources/ArrayWrite.txt";
     private String readFileWord = "src/test/resources/standardFileWord.txt";
     private String writeFileWord = "resources/ArrayWrite_word.txt";
-    private String filename = "test.txt";
-    private String filename1 = "test1.txt";
+    private String fileName = "test.txt";
+    private String fileName1 = "test1.txt";
     private String expectedDir = "resources\\test.txt";
 
     private double [] arr = {12.0, 4.0, 67.8, 6.0, 45.0, 5.0, 2.3, 1.0, 0.0};
@@ -70,7 +70,7 @@ public class FileUtilsTest {
     @Test
     public void testCreatFile() throws Exception {
 
-        File file = fileUtils.creatFile(filename);
+        File file = fileUtils.creatFile(fileName);
         new BufferedWriter(new FileWriter(file));
         String result = file.getPath();
         System.out.println(result);
@@ -82,7 +82,7 @@ public class FileUtilsTest {
     @Test
     public void testCreatFile1 () throws Exception  {
         boolean expected = true;
-        File fileNew = fileUtils.creatFile(filename1);
+        File fileNew = fileUtils.creatFile(fileName1);
         new BufferedWriter(new FileWriter(fileNew));
         boolean result1 =  fileNew.exists();
 
