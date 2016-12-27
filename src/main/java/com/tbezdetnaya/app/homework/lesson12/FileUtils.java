@@ -19,6 +19,12 @@ public class FileUtils {
     private String dirFile = "resources/";
     PalindrameSearch palindrome = new PalindrameSearch();
 
+    /**
+     * Реализовать чтение из файла строк с массивами чисел, разделенными запятыми,
+     * и их сортировку с последующей записью в другой файл. Для чтения файла и записи
+     * в файл создать вспомогательные классы и/или методы.
+     */
+
 
     public double[] readFileNumber ()throws IOException{
         BufferedReader reader = new BufferedReader(new FileReader(arrayData));
@@ -47,6 +53,11 @@ public class FileUtils {
         writer.close();
 
     }
+
+    /**
+     * Реализовать программу, которая считывает из файла список слов
+     * в столбик, и выводит в другой файл список слов и признак полиндромности в виде “moom is polindrome”.
+     */
     public String[] readFileWord()throws IOException{
         BufferedReader reader = new BufferedReader(new FileReader(arrayData1));
         String line;
@@ -74,6 +85,12 @@ public class FileUtils {
 
 
     }
+
+    /**
+     *Реализовать программу, которая при запуске запрашивает у пользователя имя файла
+     *  и затем запрашивает у пользователя текст, считывая его построчно с консоли и сохраняя в файл.
+     *  При вводе комбинации символов *exit* программа сохраняет все введенные строки в файл и завершает свою работу.
+     */
     public File creatFile (String s){
         File file = new File(dirFile,  s);
 
@@ -97,6 +114,14 @@ public class FileUtils {
         writer.close();
 
     }
+
+    /**
+     *Написать программу, которая создает properties file и считывает с консоли данные, введенные пользователем в формате ключ и его значение, разделенное запятой.
+     *  Например “dbname, localhost”.
+     * При вводе пустой строки - программа сохраняет все данные в файл и затем выводит ключи и значения c разделителем в виде “=”, например “dbname=localhost”.
+     * ОБРАТИТЕ ваше внимание на то, что ключи не должны дублироваться: если пользователь ввел новое значение
+     * для уже ранее введенного ключа - то старое значение ключа следует заменить новым.
+     */
     public void readerWriteKeyValue ()throws IOException{
         System.out.println("Specify the key and its value, separated by commas. On completion enter an empty string.");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
