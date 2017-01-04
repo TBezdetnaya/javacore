@@ -10,6 +10,7 @@ public class Lesson13Runner {
 
         WhiteCollar collar = new WhiteCollar("Yoko", 23,"Gonzo - Inc");
         System.out.println("Name: " + collar.getName());
+        collar.setCompany("123");
 
 
 
