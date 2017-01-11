@@ -5,10 +5,14 @@ package com.tbezdetnaya.app.classWork.lesson15;
  */
 public class Main {
     public static void main(String[] args) {
-        Car bmw = new BMW();
-        Car audi = new Audi();
-        printEmissions(bmw);
+        BMW bmw = new BMW("X6");
+
+        Car audi = new Audi("X5");
+      //  System.out.println(bmw.name);
+      //  printEmissions(bmw);
         printEmissions(audi);
+        Mentor mentor = new Mentor(" "," ");
+        mentor.printLessonFinished(mentor.lessonFinished("lesson15 finished"));
 
 
 
