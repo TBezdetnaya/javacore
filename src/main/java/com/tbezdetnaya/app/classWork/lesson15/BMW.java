@@ -5,13 +5,22 @@ package com.tbezdetnaya.app.classWork.lesson15;
  */
 public class BMW  {
     private Engine bmwEngine;
-    public BMW(String name) {
-        bmwEngine = new Engine();
-        bmwEngine.setTypeOfCylinder(name);
 
+    public BMW(String typeOfCylinder) {
+       this.bmwEngine = new Engine();
+        bmwEngine.setTypeOfCylinder(typeOfCylinder);
+
+    }
+    public String getTypeOfCylinder(){
+        return bmwEngine.getTypeOfCylinder();
     }
 
     void drive(){
         System.out.println("90 emissions");
+    }
+
+    @Override
+    public String toString() {
+        return "BMW{" + "Engine " + getTypeOfCylinder() + '}';
     }
 }

@@ -6,6 +6,7 @@ package com.tbezdetnaya.app.classWork.lesson15;
 public class Main {
     public static void main(String[] args) {
         BMW bmw = new BMW("X6");
+        System.out.println(bmw);
 
         Car audi = new Audi("X5");
       //  System.out.println(bmw.name);
