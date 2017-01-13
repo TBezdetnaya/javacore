@@ -14,7 +14,7 @@ public class MainMenu {
 
         PalindrameSearch palindrameSearch = new PalindrameSearch();
         Scanner sc = new Scanner(System.in);
-        System.out.println("Welcome! This application checks the line to palindrome. Enter a number to begin the work:");
+        System.out.println("Welcome! This application checks the line to palindrome. Enter text \"TASK[number]\" to begin the work:");
 
 
         do {
