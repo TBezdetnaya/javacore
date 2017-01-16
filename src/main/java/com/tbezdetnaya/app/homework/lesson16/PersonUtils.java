@@ -1,9 +1,7 @@
 package com.tbezdetnaya.app.homework.lesson16;
 import com.tbezdetnaya.app.homework.lesson7.Validation;
-
 import java.util.Random;
 import java.util.Scanner;
-
 /**
  * Created by tanya on 16.01.2017.
  * Реализовать игру “Угадай-ка”, которая будет выводить случайным образом ФИО одного из известных людей и предлагать пользователю ввести его возраст.
@@ -15,6 +13,7 @@ import java.util.Scanner;
 public class PersonUtils {
     private Random randomGenerator;
     private  Scanner sc = new Scanner(System.in);
+    private int count = 0;
 
     public PersonUtils() {
         randomGenerator = new Random();
@@ -29,7 +28,6 @@ public class PersonUtils {
     public void guessPersonData() {
         do {
             try {
-                int count = 0;
                 do {
                     Person p = getRandomPerson();
                     System.out.println("How old is " + p.getFullName() + "?");
