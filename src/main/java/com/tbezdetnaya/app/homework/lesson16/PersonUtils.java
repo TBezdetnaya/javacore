@@ -35,9 +35,9 @@ public class PersonUtils {
                     System.out.println("How old is " + p.getFullName() + "?");
                     String inputAge = sc.next();
                     System.out.println("This person is 'alive' or 'died'?");
-                    String inputStatus = sc.next();
+                    String inputString = sc.next();
                     int age = new Integer(inputAge);
-                    if (p.getAge() == age && p.isAlive().equals(inputStatus)) {
+                    if (p.getAge() == age && p.isAlive().equals(inputString)) {
                         System.out.println("Congratulations, you guessed!");
                         break;
                     } else {
