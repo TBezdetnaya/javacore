@@ -1,5 +1,6 @@
 package com.tbezdetnaya.runners.homework;
 import com.tbezdetnaya.app.homework.lesson11.ArrayParse;
+import com.tbezdetnaya.app.homework.lesson16.MenuItem;
 import com.tbezdetnaya.app.homework.lesson7.Validation;
 import com.tbezdetnaya.app.homework.lesson9.ArrayUtils;
 
@@ -14,18 +15,18 @@ public class Lesson11Runner {
         ArrayParse arrayParse = new ArrayParse();
         ArrayUtils arrayUtils = new ArrayUtils();
         Scanner sc = new Scanner(System.in);
-
+        System.out.println("Welcome!This application work to strings. Enter text \"TASK[number]\" to begin the work:");
+        System.out.println("1 - to create array of several numbers and sort  them descending or ascending");
+        System.out.println("2 - extract from  array only alphabet  characters (large and small ones)");
+        System.out.println("3 - output of specified text from different lines");
 
         do {
-            System.out.println("Welcome!This application work to strings. Enter a number to begin the work:");
-            System.out.println("1 - to create array of several numbers and sort  them descending or ascending");
-            System.out.println("2 - extract from  array only alphabet  characters (large and small ones)");
-            System.out.println("3 - output of specified text from different lines");
+
             try {
-                switch (sc.nextInt()) {
+                MenuItem item = MenuItem.valueOf((sc.nextLine().toUpperCase()));
+                switch (item) {
 
-
-                    case 1:
+                    case TASK1:
                         Validation.checkDelemiter();
                         System.out.println("Specify a string using the numbers via delimiter or space");
                         double arr[] = arrayParse.getArray(sc.next());
@@ -39,13 +40,13 @@ public class Lesson11Runner {
                             arrayUtils.arrayBubbleSortDecrease(arr);
                         }
                         break;
-                    case 2:
+                    case TASK2:
                         sc.useDelimiter("\n");
                         System.out.println("Specify a string using the letters and numbers via delimiter or space");
                         arrayParse.getArrayOnlyLetters(sc.next());
 
                         break;
-                    case 3:
+                    case TASK3:
                         sc.useDelimiter("\n"); // для вывода всей строки
                         System.out.println("Specify a string using the letters and numbers via delimiter or space");
                         String str = sc.next();
