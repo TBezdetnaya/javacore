@@ -1,8 +1,6 @@
 package com.tbezdetnaya.runners.homework;
 import com.tbezdetnaya.app.homework.lesson16.MenuItem;
 import com.tbezdetnaya.app.homework.lesson16.PersonUtils;
-import com.tbezdetnaya.app.homework.lesson7.Validation;
-
 import java.util.Scanner;
 
 /**

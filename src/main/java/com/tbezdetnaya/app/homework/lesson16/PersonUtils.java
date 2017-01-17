@@ -29,7 +29,6 @@ public class PersonUtils {
     }
 
     public void guessPersonData() {
-
         do {
             Person p = getRandomPerson();
             System.out.println("How old is " + p.getFullName() + "?");
