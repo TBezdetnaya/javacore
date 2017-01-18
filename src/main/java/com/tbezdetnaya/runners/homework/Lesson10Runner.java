@@ -11,9 +11,10 @@ public class Lesson10Runner {
     public static void main(String[] args) {
         PalindrameSearch palindrameSearch = new PalindrameSearch();
         Scanner sc = new Scanner(System.in);
-        System.out.println("Welcome! This application checks the line to palindrome. Enter text \"TASK[number]\" to begin the work:");
+
         do {
             try {
+                System.out.println("Welcome! This application checks the line to palindrome. Enter text \"TASK[number]\" to begin the work:");
                 MenuItem item = MenuItem.valueOf((sc.nextLine().toUpperCase()));
                 switch (item) {
 

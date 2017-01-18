@@ -15,14 +15,15 @@ public class Lesson11Runner {
         ArrayParse arrayParse = new ArrayParse();
         ArrayUtils arrayUtils = new ArrayUtils();
         Scanner sc = new Scanner(System.in);
-        System.out.println("Welcome!This application work to strings. Enter text \"TASK[number]\" to begin the work:");
-        System.out.println("1 - to create array of several numbers and sort  them descending or ascending");
-        System.out.println("2 - extract from  array only alphabet  characters (large and small ones)");
-        System.out.println("3 - output of specified text from different lines");
+
 
         do {
 
             try {
+                System.out.println("Welcome!This application work to strings. Enter text \"TASK[number]\" to begin the work:");
+                System.out.println("1 - to create array of several numbers and sort  them descending or ascending");
+                System.out.println("2 - extract from  array only alphabet  characters (large and small ones)");
+                System.out.println("3 - output of specified text from different lines");
                 MenuItem item = MenuItem.valueOf((sc.nextLine().toUpperCase()));
                 switch (item) {
 

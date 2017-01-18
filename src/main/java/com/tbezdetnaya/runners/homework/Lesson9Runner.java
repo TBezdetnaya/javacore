@@ -17,22 +17,23 @@ public class Lesson9Runner {
         ArrayGenerator arrayGenerator = new ArrayGenerator();
         ArrayUtils operationsWithArrays = new ArrayUtils();
         Scanner sc = new Scanner(System.in);
-        System.out.println("Welcome! This application executes several tasks. Enter text \"TASK[number]\" to begin the work:");
-        System.out.println("----------------------------------------------------");
-        System.out.println(" Enter 1 - to create an array with all even numbers from 2 to 20");
-        System.out.println("2 - to create an array with all not even numbers from 1 to 99");
-        System.out.println("3 - to create an array with 15 random  numbers from a segment [0;9]");
-        System.out.println("4 - to create an array with 15 random  numbers from a segment[0;999]");
-        System.out.println("5 - to create a two-dimensional array with 8 lines for 5 columns from random whole numbers from a segment[10;99]");
-        System.out.println("6 - to create a two-dimensional array with 8 lines for 5 columns from random whole numbers from a segment[1;999]");
-        System.out.println("7 - to execute a task №7");
-        System.out.println("8  - sorts the specified array into ascending numerical order.");
-        System.out.println("9 - sorts the specified array into decrease number ");
-        System.out.println("10 - selection sorts the specified array.");
-        System.out.println("11 - to create a two-dimensional array from a segment [-99; 99].");
-        System.out.println(">");
+
 
         do {
+            System.out.println("Welcome! This application executes several tasks. Enter a number to begin the work:");
+            System.out.println("----------------------------------------------------");
+            System.out.println(" Enter 1 - to create an array with all even numbers from 2 to 20");
+            System.out.println("2 - to create an array with all not even numbers from 1 to 99");
+            System.out.println("3 - to create an array with 15 random  numbers from a segment [0;9]");
+            System.out.println("4 - to create an array with 15 random  numbers from a segment[0;999]");
+            System.out.println("5 - to create a two-dimensional array with 8 lines for 5 columns from random whole numbers from a segment[10;99]");
+            System.out.println("6 - to create a two-dimensional array with 8 lines for 5 columns from random whole numbers from a segment[1;999]");
+            System.out.println("7 - to execute a task №7");
+            System.out.println("8  - sorts the specified array into ascending numerical order.");
+            System.out.println("9 - sorts the specified array into decrease number ");
+            System.out.println("10 - selection sorts the specified array.");
+            System.out.println("11 - to create a two-dimensional array from a segment [-99; 99].");
+            System.out.println(">");
             MenuItem item = MenuItem.valueOf((sc.nextLine().toUpperCase()));
             switch (item) {
                 case TASK1:

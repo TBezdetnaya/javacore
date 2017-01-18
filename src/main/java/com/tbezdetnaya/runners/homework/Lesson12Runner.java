@@ -18,15 +18,15 @@ public class Lesson12Runner {
     public static void main(String[] args)throws IOException {
         FileUtils file = new FileUtils();
         ArrayUtils arrayUtils = new ArrayUtils();
-        System.out.println("Welcome!This application works with files. Enter text \"TASK[number]\" to begin your work:");
-        System.out.println("1 - read string with an array of numbers from file. Sort out and write the result into the file.");
-        System.out.println("2 - to read a list of words from file, to put the words with the palindrome feature in the other file");
-        System.out.println("3 - prompt the user for the file name, text. Save the specified strings in the file after entering the \"exit\"");
-        System.out.println("4 - The program creates a file, reads the input values separated by commas. After entering an empty string, all data is written into the file.");
-        do {
 
+        do {
             Scanner sc = new Scanner(System.in);
             try {
+                System.out.println("Welcome!This application works with files. Enter text \"TASK[number]\" to begin your work:");
+                System.out.println("1 - read string with an array of numbers from file. Sort out and write the result into the file.");
+                System.out.println("2 - to read a list of words from file, to put the words with the palindrome feature in the other file");
+                System.out.println("3 - prompt the user for the file name, text. Save the specified strings in the file after entering the \"exit\"");
+                System.out.println("4 - The program creates a file, reads the input values separated by commas. After entering an empty string, all data is written into the file.");
                 MenuItem item = MenuItem.valueOf((sc.nextLine().toUpperCase()));
                 switch (item){
                     case TASK1:
