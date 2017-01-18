@@ -1,6 +1,4 @@
 package com.tbezdetnaya.app.homework.lesson9;
-import com.sun.javafx.binding.StringFormatter;
-
 import java.util.Arrays;
 import java.util.Collections;
 
