@@ -1,0 +1,11 @@
+name,surname,faculty,course,status,title
+Ivan,Ivanov,engineering,-,professor,true
+Fedor,Fedorov,medical,2,bachelor,false
+Petr,Petrov,medical,2,master,false
+Oleg,Petrov,engineering,-,professor,true
+Adam,Gordon,jurisprudence,3,specialist,false
+Boris,Jones,economic,1,student,false
+Elvin,Thomas,economic,-,assistant,true
+Theresa,Holiday,medical,-,manager,true
+Nicole,WilKinson,jurisprudence,3,specialist,false
+Nicole,Gordon,medical,2,bachelor,false
