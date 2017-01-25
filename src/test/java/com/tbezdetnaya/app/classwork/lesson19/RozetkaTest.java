@@ -15,6 +15,7 @@ import java.util.concurrent.TimeUnit;
 public class RozetkaTest {
     FirefoxDriver driver;
     private String text = "Интернет-магазин ROZETKA™: фототехника, видеотехника, аудиотехника, компьютеры и компьютерные комплектующие";
+    private String searchText = "Apple iPhone 6s";
     @Before
     public void setUp() throws Exception {
         System.setProperty("webdriver.gecko.driver", "resources/geckodriver.exe");
@@ -27,19 +28,24 @@ public class RozetkaTest {
 
     @Test
     public void checkTitleTest(){
-        Assert.assertTrue(driver.findElement(By.cssSelector("title")).getText().contains(text));
+        Assert.assertTrue(driver.getTitle().contains(text));
+       // Assert.assertTrue(driver.findElement(By.cssSelector("title")).getText().contains(text));//вариант 2
 
 
     }
+
+
 
     @Test
     public void test2(){
         driver.findElement(By.xpath(".//*[@id='rz-search']/form/div[1]/div[2]/input")).sendKeys("iphone 6s");
         driver.findElement(By.xpath(".//*[@id='rz-search']/form/span/span/button")).click();
-        Assert.assertTrue(driver.getPageSource().contains("iphone 6s"));
+       // Assert.assertTrue(driver.getPageSource().contains(searchText));// почему то перестало работать
+        Assert.assertTrue(driver.findElement(By.xpath(".//*[@id='block_with_search']/div/div[6]/div/div/div/div/div[2]/a")).getText().contains(searchText));
 
 
     }
+
 
 
     @After
