@@ -14,13 +14,12 @@ public class SeleniumBuilder {
     @Before
     public void setUp() throws Exception {
         System.setProperty("webdriver.gecko.driver", "resources/geckodriver.exe");
-
         wd = new FirefoxDriver();
         wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     }
     
     @Test
-    public void SeleniumBuilder() {
+    public void SeleniumBuilderTest() {
         wd.get("https://www.google.com.ua/");
         wd.findElement(By.id("lst-ib")).click();
         wd.findElement(By.id("lst-ib")).clear();
