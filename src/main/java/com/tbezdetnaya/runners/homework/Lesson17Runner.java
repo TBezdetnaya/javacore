@@ -19,10 +19,8 @@ public class Lesson17Runner {
         ArrayParse arrayParse = new ArrayParse();
         FileUtils utils = new FileUtils();
         utils.readFileWord();
-
         Search search = new Search();
         CheckDuplicates checkDuplicates = new CheckDuplicates();
-       // ArrayList<Person>
         Scanner sc = new Scanner(System.in);
         System.out.println("Welcome! This application executes several tasks. Enter text \"TASK[number]\" to begin the work:");
         do{
