@@ -24,8 +24,7 @@ public class Lesson17Runner {
         Scanner sc = new Scanner(System.in);
         System.out.println("Welcome! This application executes several tasks. Enter text \"TASK[number]\" to begin the work:");
         do{
-
-
+            try{
                 System.out.println("1 - sorts the specified arrayDouble into  decrease number");
                 System.out.println("2 - sorts the specified arrayInteger into  decrease number.");
                 System.out.println("3 - sorts the specified arrayFloat into decrease number");
@@ -77,6 +76,10 @@ public class Lesson17Runner {
                         checkDuplicates.readWordConcole(sc.next());
                         break;
                 }
+            }catch (Exception e) {
+                System.out.println("Error: invalid value");
+            }
+
 
 
         }while (Validation.needContinue());

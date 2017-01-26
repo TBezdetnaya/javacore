@@ -27,25 +27,40 @@ public class Search {
     }
 
     public void printResultSearchStudent(ArrayList<Person> list) {
-        for (int i = 0; i <list.size() ; i++) {
-            Person p = list.get(i);
-            System.out.println( p.getName() + " " + p.getSurname()+ ", faculty - " + p.getFaculty()+ "; course is " + p.getCourse() + "; status - " + p.getStatus());
+        if(list.isEmpty()){
+            System.out.println("Not found");
 
+        }else{
+            for (int i = 0; i <list.size() ; i++) {
+                Person p = list.get(i);
+                System.out.println( p.getName() + " " + p.getSurname()+ ", faculty - " + p.getFaculty()+ "; course is " + p.getCourse() + "; status - " + p.getStatus());
+            }
         }
+
 
     }
     public void  printResultSearchEmployee(ArrayList<Person> list){
-        for (int i = 0; i < list.size(); i++) {
-            Person p = list.get(i);
-            System.out.println( p.getName() + " " + p.getSurname()+ ", faculty - " + p.getFaculty()+ "; course is " + p.getStatus());
+        if(list.isEmpty()){
+            System.out.println("Not found");
+        }else{
+            for (int i = 0; i < list.size(); i++) {
+                Person p = list.get(i);
+                System.out.println( p.getName() + " " + p.getSurname()+ ", faculty - " + p.getFaculty()+ "; course is " + p.getStatus());
+            }
         }
+
 
     }
     public void  printResultSearchListAll (ArrayList<Person> list){
-        for (int i = 0; i < list.size(); i++) {
-            Person p = list.get(i);
-            System.out.println( p.getName() + " " + p.getSurname());
+        if(list.isEmpty()){
+            System.out.println("Not found");
+        }else{
+            for (int i = 0; i < list.size(); i++) {
+                Person p = list.get(i);
+                System.out.println( p.getName() + " " + p.getSurname());
+            }
         }
+
 
     }
 }
