@@ -18,8 +18,11 @@ public class Lesson17Runner {
     public static void main(String[] args) throws IOException {
         ArrayParse arrayParse = new ArrayParse();
         FileUtils utils = new FileUtils();
+        utils.readFileWord();
+
         Search search = new Search();
         CheckDuplicates checkDuplicates = new CheckDuplicates();
+       // ArrayList<Person>
         Scanner sc = new Scanner(System.in);
         System.out.println("Welcome! This application executes several tasks. Enter text \"TASK[number]\" to begin the work:");
         do{
@@ -60,17 +63,14 @@ public class Lesson17Runner {
                     break;
                     case TASK4:
                         System.out.println("Enter one of the values: name, surname, faculty or course");
-                        utils.readFileWord();
                         search.printResultSearchStudent(search.listSearch(utils.getListStudent()));
                         break;
                     case TASK5:
-                        System.out.println("Enter one of the values: name, surname, faculty or course");
-                        utils.readFileWord();
+                        System.out.println("Enter one of the values: name, surname, faculty");
                         search.printResultSearchEmployee(search.listSearch(utils.getListEmployee()));
                         break;
                     case TASK6:
                         System.out.println("Enter one of the values: name, surname, faculty or course");
-                        utils.readFileWord();
                         ArrayList<Person> listAll = utils.joinLists(utils.getListEmployee(),utils.getListStudent());
                         search.printResultSearchListAll(search.listSearch(listAll));
                         break;
