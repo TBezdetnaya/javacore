@@ -1,5 +1,4 @@
 package com.tbezdetnaya.app.homework.lesson17;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
