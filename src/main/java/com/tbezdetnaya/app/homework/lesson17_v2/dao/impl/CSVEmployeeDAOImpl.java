@@ -11,4 +11,9 @@ public class CSVEmployeeDAOImpl implements EmployeeDAO {
     public CSVEmployeeDAOImpl(CSVStorage storage) {
         this.storage = storage;
     }
+
+    @Override
+    public void getEmployees() {
+
+    }
 }
