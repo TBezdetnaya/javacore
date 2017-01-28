@@ -33,23 +33,27 @@ public class CSVStorage {
     }
     private void init(String dataSourceFilePath) throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(dataSourceFilePath));
-        final String[] line = {};
+        String s;
         reader.readLine();
-        final PersonType personType = PersonType.valueOf(line[5]);
-        final EmployeeReader employeeReader = new EmployeeReader();
-        final StudentReader studentReader = new StudentReader();
-        switch (personType) {
-            case EMPLOYEE:
-                final Employee employee = employeeReader.read(line);
-                employees.add(employee);
-                break;
-            case STUDENT:
-                final Student student = studentReader.read(line);
-                students.add(student);
-                break;
-            default:
-                throw new IllegalStateException("Unsupported personType = " + personType);
+        while ((s = reader.readLine()) != null) {
+            final String[] line = s.split(",");
+            final PersonType personType = PersonType.valueOf(line[5]);
+            final EmployeeReader employeeReader = new EmployeeReader();
+            final StudentReader studentReader = new StudentReader();
+            switch (personType) {
+                case EMPLOYEE:
+                    final Employee employee = employeeReader.read(line);
+                    employees.add(employee);
+                    break;
+                case STUDENT:
+                    final Student student = studentReader.read(line);
+                    students.add(student);
+                    break;
+                default:
+                    throw new IllegalStateException("Unsupported personType = " + personType);
+            }
         }
+
         reader.close();
 
     }

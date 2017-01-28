@@ -1,4 +1,7 @@
-package com.tbezdetnaya.app.homework.lesson17_v2.domain;
+package com.tbezdetnaya.app.homework.lesson17_v2.storage;
+
+import com.tbezdetnaya.app.homework.lesson17_v2.domain.Employee;
+import com.tbezdetnaya.app.homework.lesson17_v2.domain.EmployeePosition;
 
 /**
  * Created by Tanya on 28.01.2017.
