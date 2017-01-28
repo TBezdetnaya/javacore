@@ -1,5 +1,6 @@
 package com.tbezdetnaya.app.homework.lesson17_v2.dao.impl;
 import com.tbezdetnaya.app.homework.lesson17_v2.dao.EmployeeDAO;
+import com.tbezdetnaya.app.homework.lesson17_v2.domain.Employee;
 import com.tbezdetnaya.app.homework.lesson17_v2.storage.CSVStorage;
 
 import java.util.List;
@@ -16,7 +17,8 @@ public class CSVEmployeeDAOImpl implements EmployeeDAO {
 
 
     @Override
-    public List<EmployeeDAO> getEmployees() {
-        return getEmployees();
+    public List<Employee> getEmployees() {
+
+        return storage.getEmployees();
     }
 }

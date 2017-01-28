@@ -1,6 +1,7 @@
 package com.tbezdetnaya.app.homework.lesson17_v2.dao.impl;
 
 import com.tbezdetnaya.app.homework.lesson17_v2.dao.StudentDAO;
+import com.tbezdetnaya.app.homework.lesson17_v2.domain.Student;
 import com.tbezdetnaya.app.homework.lesson17_v2.storage.CSVStorage;
 
 import java.util.List;
@@ -17,7 +18,7 @@ public class CSVStudentDAOImpl implements StudentDAO {
 
 
     @Override
-    public List<StudentDAO> getStudents() {
-        return getStudents();
+    public List<Student> getStudents() {
+        return storage.getStudents();
     }
 }
