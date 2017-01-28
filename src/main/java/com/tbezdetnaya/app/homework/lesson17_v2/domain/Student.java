@@ -1,4 +1,4 @@
-package com.tbezdetnaya.app.homework.lesson17_v2;
+package com.tbezdetnaya.app.homework.lesson17_v2.domain;
 
 /**
  * Created by Tanya on 27.01.2017.
@@ -6,6 +6,10 @@ package com.tbezdetnaya.app.homework.lesson17_v2;
 public class Student extends AbstractPerson {
     private int course;
     private StudentType type;
+
+    public Student(String line) {
+
+    }
 
 
     public int getCourse() {

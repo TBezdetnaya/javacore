@@ -1,11 +1,11 @@
-name,surname,faculty,course,status,title
-Ivan,Ivanov,engineering,-,professor,true
-Fedor,Fedorov,medical,2,bachelor,false
-Petr,Petrov,medical,2,master,false
-Oleg,Petrov,engineering,-,professor,true
-Adam,Gordon,jurisprudence,3,specialist,false
-Boris,Jones,economic,1,student,false
-Elvin,Thomas,economic,-,assistant,true
-Theresa,Holiday,medical,-,manager,true
-Nicole,WilKinson,jurisprudence,3,specialist,false
-Nicole,Gordon,medical,2,bachelor,false
+name,surname,faculty,course,status,"title type"
+Ivan,Ivanov,engineering,-,PROFESSOR,EMPLOYEE
+Fedor,Fedorov,medical,2,BACHELOR,STUDENT
+Petr,Petrov,medical,2,MASTER,STUDENT
+Oleg,Petrov,engineering,-,PROFESSOR,EMPLOYEE
+Adam,Gordon,jurisprudence,3,SPECIALIST,STUDENT
+Boris,Jones,economic,1,STUDENT,STUDENT
+Elvin,Thomas,economic,-,ASSISTANT,EMPLOYEE
+Theresa,Holiday,medical,-,MANAGER,EMPLOYEE
+Nicole,WilKinson,jurisprudence,3,SPECIALIST,STUDENT
+Nicole,Gordon,medical,2,BACHELOR,STUDENT

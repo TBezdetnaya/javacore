@@ -1,10 +1,14 @@
-package com.tbezdetnaya.app.homework.lesson17_v2;
+package com.tbezdetnaya.app.homework.lesson17_v2.domain;
 
 /**
  * Created by Tanya on 27.01.2017.
  */
 public class Employee extends AbstractPerson {
     private EmployeePosition position;
+
+    public Employee(String line) {
+
+    }
 
 
     public EmployeePosition getPosition() {
