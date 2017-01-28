@@ -16,9 +16,6 @@ import java.util.List;
 public class CSVStorage {
     
     private final List<Student> students;
-
-
-
     private final List<Employee> employees;
 
 
