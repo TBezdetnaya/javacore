@@ -1,4 +1,4 @@
-name,surname,faculty,course,status,"title type"
+name,surname,faculty,course,status,type
 Ivan,Ivanov,engineering,-,PROFESSOR,EMPLOYEE
 Fedor,Fedorov,medical,2,BACHELOR,STUDENT
 Petr,Petrov,medical,2,MASTER,STUDENT
