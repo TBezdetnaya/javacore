@@ -8,41 +8,39 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Tanya on 28.01.2017.
  */
 public class CSVStorage {
-    private String arrayData ="resources/card.csv";
-    private BufferedReader reader;
-    private ArrayList<Student> listStudent;
-    private ArrayList<Employee> listEmployee;
+    private String dataSourceFile = "resources/cardindex.csv";
+    private List<Student> students;
+    private List<Employee> employees;
 
 
-    public  CSVStorage() throws FileNotFoundException {
-        this.reader = new BufferedReader(new FileReader(arrayData));
+
+    public List<Employee> getListEmployee() {
+        return employees;
     }
 
-    public ArrayList<Employee> getListEmployee() {
-        return listEmployee;
-    }
-
-    public ArrayList<Student> getListStudent() {
-        return listStudent;
+    public List<Student> getListStudent() {
+        return students;
     }
     public void init() throws IOException {
+        BufferedReader reader = new BufferedReader(new FileReader(dataSourceFile));
         String line;
-        listEmployee = new ArrayList<>();
-        listStudent = new ArrayList<>();
+        employees = new ArrayList<>();
+        students = new ArrayList<>();
         reader.readLine();
         while ((line = reader.readLine())!= null){
             String[] arrSplit = line.split(",");
            Student student = new Student(line);
             if(arrSplit[5].contains("STUDENT")){
-               listStudent.add(student);
+               students.add(student);
             }else{
                 Employee employee = new Employee(line);
-                listEmployee.add(employee);
+                employees.add(employee);
             }
         }
 
