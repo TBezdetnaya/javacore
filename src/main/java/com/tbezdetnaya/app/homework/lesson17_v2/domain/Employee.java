@@ -6,13 +6,6 @@ package com.tbezdetnaya.app.homework.lesson17_v2.domain;
 public class Employee extends AbstractPerson {
     private EmployeePosition position;
 
-    public Employee(String line) {
-
-    }
-
-    public Employee() {
-
-    }
 
     public EmployeePosition getPosition() {
         return position;

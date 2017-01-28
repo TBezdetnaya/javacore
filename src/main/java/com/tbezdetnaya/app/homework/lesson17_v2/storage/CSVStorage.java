@@ -16,6 +16,9 @@ import java.util.List;
 public class CSVStorage {
     
     private final List<Student> students;
+
+
+
     private final List<Employee> employees;
 
 
@@ -24,13 +27,11 @@ public class CSVStorage {
         this.employees = new ArrayList<>();
         init(dataSourceFilePath);
     }
-
-
-    public List<Employee> getListEmployee() {
+    public List<Employee> getEmployees() {
         return employees;
     }
 
-    public List<Student> getListStudent() {
+    public List<Student> getStudents() {
         return students;
     }
     private void init(String dataSourceFilePath) throws IOException {
@@ -38,17 +39,17 @@ public class CSVStorage {
         String dataSourceFileLine;
         reader.readLine();
         while ((dataSourceFileLine = reader.readLine()) != null) {
-            final String[] line = dataSourceFileLine.split(",");
-            final PersonType personType = PersonType.valueOf(line[5]);
+            final String[] personData = dataSourceFileLine.split(",");
+            final PersonType personType = PersonType.valueOf(personData[5]);
             final EmployeeReader employeeReader = new EmployeeReader();
             final StudentReader studentReader = new StudentReader();
             switch (personType) {
                 case EMPLOYEE:
-                    final Employee employee = employeeReader.read(line);
+                    final Employee employee = employeeReader.read(personData);
                     employees.add(employee);
                     break;
                 case STUDENT:
-                    final Student student = studentReader.read(line);
+                    final Student student = studentReader.read(personData);
                     students.add(student);
                     break;
                 default:

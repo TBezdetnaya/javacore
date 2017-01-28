@@ -7,14 +7,6 @@ public class Student extends AbstractPerson {
     private int course;
     private StudentType type;
 
-    public Student(String line) {
-
-    }
-
-    public Student() {
-
-    }
-
 
     public int getCourse() {
         return course;
