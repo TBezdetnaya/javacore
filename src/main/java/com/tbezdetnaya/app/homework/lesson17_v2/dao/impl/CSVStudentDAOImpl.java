@@ -8,10 +8,10 @@ import java.util.List;
 /**
  * Created by Tanya on 28.01.2017.
  */
-public class CSVSturentDAOImpl implements StudentDAO {
+public class CSVStudentDAOImpl implements StudentDAO {
     private final CSVStorage storage;
 
-    public CSVSturentDAOImpl(CSVStorage storage) {
+    public CSVStudentDAOImpl(CSVStorage storage) {
         this.storage = storage;
     }
 
