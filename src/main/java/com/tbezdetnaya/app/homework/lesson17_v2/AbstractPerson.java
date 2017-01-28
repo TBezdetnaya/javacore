@@ -8,26 +8,6 @@ public abstract class AbstractPerson {
     private String surname;
     private String faculty;
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        AbstractPerson that = (AbstractPerson) o;
-
-        if (name != null ? !name.equals(that.name) : that.name != null) return false;
-        if (surname != null ? !surname.equals(that.surname) : that.surname != null) return false;
-        return faculty != null ? faculty.equals(that.faculty) : that.faculty == null;
-
-    }
-
-    @Override
-    public int hashCode() {
-        int result = name != null ? name.hashCode() : 0;
-        result = 31 * result + (surname != null ? surname.hashCode() : 0);
-        result = 31 * result + (faculty != null ? faculty.hashCode() : 0);
-        return result;
-    }
 
     public String getName() {
         return name;
@@ -52,4 +32,25 @@ public abstract class AbstractPerson {
     public void setFaculty(String faculty) {
         this.faculty = faculty;
     }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        AbstractPerson that = (AbstractPerson) o;
+
+        if (name != null ? !name.equals(that.name) : that.name != null) return false;
+        if (surname != null ? !surname.equals(that.surname) : that.surname != null) return false;
+        return faculty != null ? faculty.equals(that.faculty) : that.faculty == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = name != null ? name.hashCode() : 0;
+        result = 31 * result + (surname != null ? surname.hashCode() : 0);
+        result = 31 * result + (faculty != null ? faculty.hashCode() : 0);
+        return result;
+    }
+
 }
