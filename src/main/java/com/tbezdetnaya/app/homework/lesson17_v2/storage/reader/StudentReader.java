@@ -1,8 +1,7 @@
-package com.tbezdetnaya.app.homework.lesson17_v2.storage;
+package com.tbezdetnaya.app.homework.lesson17_v2.storage.reader;
 
 import com.tbezdetnaya.app.homework.lesson17_v2.domain.Student;
 import com.tbezdetnaya.app.homework.lesson17_v2.domain.StudentType;
-import com.tbezdetnaya.app.homework.lesson17_v2.storage.AbstractPersonReader;
 
 /**
  * Created by Tanya on 28.01.2017.

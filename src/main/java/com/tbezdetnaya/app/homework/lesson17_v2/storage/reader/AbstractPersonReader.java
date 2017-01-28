@@ -1,4 +1,4 @@
-package com.tbezdetnaya.app.homework.lesson17_v2.storage;
+package com.tbezdetnaya.app.homework.lesson17_v2.storage.reader;
 
 import com.tbezdetnaya.app.homework.lesson17_v2.domain.AbstractPerson;
 

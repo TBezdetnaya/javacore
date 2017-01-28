@@ -1,6 +1,8 @@
 package com.tbezdetnaya.app.homework.lesson17_v2.storage;
 
 import com.tbezdetnaya.app.homework.lesson17_v2.domain.*;
+import com.tbezdetnaya.app.homework.lesson17_v2.storage.reader.EmployeeReader;
+import com.tbezdetnaya.app.homework.lesson17_v2.storage.reader.StudentReader;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -33,10 +35,10 @@ public class CSVStorage {
     }
     private void init(String dataSourceFilePath) throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(dataSourceFilePath));
-        String s;
+        String dataSourceFileLine;
         reader.readLine();
-        while ((s = reader.readLine()) != null) {
-            final String[] line = s.split(",");
+        while ((dataSourceFileLine = reader.readLine()) != null) {
+            final String[] line = dataSourceFileLine.split(",");
             final PersonType personType = PersonType.valueOf(line[5]);
             final EmployeeReader employeeReader = new EmployeeReader();
             final StudentReader studentReader = new StudentReader();
