@@ -5,7 +5,7 @@ package com.tbezdetnaya.app.homework.lesson17_v2.domain;
  */
 public enum StudentType {
 
-    STUDENT,SRESIALIST,MASTER,BACHELOR
+    SRESIALIST,MASTER,BACHELOR
 
 
 }

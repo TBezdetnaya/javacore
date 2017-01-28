@@ -10,6 +10,9 @@ public class Employee extends AbstractPerson {
 
     }
 
+    public Employee() {
+
+    }
 
     public EmployeePosition getPosition() {
         return position;

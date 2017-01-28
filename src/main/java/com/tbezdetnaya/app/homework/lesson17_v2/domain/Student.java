@@ -11,6 +11,10 @@ public class Student extends AbstractPerson {
 
     }
 
+    public Student() {
+
+    }
+
 
     public int getCourse() {
         return course;

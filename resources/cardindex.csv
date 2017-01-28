@@ -1,10 +1,10 @@
-name,surname,faculty,course,status,type
+name,surname,faculty,course,position,type
 Ivan,Ivanov,engineering,-,PROFESSOR,EMPLOYEE
 Fedor,Fedorov,medical,2,BACHELOR,STUDENT
 Petr,Petrov,medical,2,MASTER,STUDENT
 Oleg,Petrov,engineering,-,PROFESSOR,EMPLOYEE
 Adam,Gordon,jurisprudence,3,SPECIALIST,STUDENT
-Boris,Jones,economic,1,STUDENT,STUDENT
+Boris,Jones,economic,1,SPECIALIST,STUDENT
 Elvin,Thomas,economic,-,ASSISTANT,EMPLOYEE
 Theresa,Holiday,medical,-,MANAGER,EMPLOYEE
 Nicole,WilKinson,jurisprudence,3,SPECIALIST,STUDENT

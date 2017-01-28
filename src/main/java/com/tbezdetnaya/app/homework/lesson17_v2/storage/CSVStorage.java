@@ -1,7 +1,6 @@
 package com.tbezdetnaya.app.homework.lesson17_v2.storage;
 
-import com.tbezdetnaya.app.homework.lesson17_v2.domain.Employee;
-import com.tbezdetnaya.app.homework.lesson17_v2.domain.Student;
+import com.tbezdetnaya.app.homework.lesson17_v2.domain.*;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -14,11 +13,13 @@ import java.util.List;
  */
 public class CSVStorage {
     
-    private final List<Student> students = new ArrayList<>();
-    private final List<Employee> employees = new ArrayList<>();
-    
+    private final List<Student> students;
+    private final List<Employee> employees;
+
 
     public CSVStorage(String dataSourceFilePath ) throws IOException {
+        this.students = new ArrayList<>();
+        this.employees = new ArrayList<>();
         init(dataSourceFilePath);
     }
 
@@ -32,19 +33,23 @@ public class CSVStorage {
     }
     private void init(String dataSourceFilePath) throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(dataSourceFilePath));
-        String line;
+        final String[] line = {};
         reader.readLine();
-        while ((line = reader.readLine())!= null){
-            String[] arrSplit = line.split(",");
-           Student student = new Student(line);
-            if(arrSplit[5].contains("STUDENT")){
-               students.add(student);
-            }else{
-                Employee employee = new Employee(line);
+        final PersonType personType = PersonType.valueOf(line[5]);
+        final EmployeeReader employeeReader = new EmployeeReader();
+        final StudentReader studentReader = new StudentReader();
+        switch (personType) {
+            case EMPLOYEE:
+                final Employee employee = employeeReader.read(line);
                 employees.add(employee);
-            }
+                break;
+            case STUDENT:
+                final Student student = studentReader.read(line);
+                students.add(student);
+                break;
+            default:
+                throw new IllegalStateException("Unsupported personType = " + personType);
         }
-
         reader.close();
 
     }

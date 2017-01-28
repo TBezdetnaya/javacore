@@ -1,8 +1,5 @@
 package com.tbezdetnaya.app.homework.lesson11;
 
-import java.util.Arrays;
-import java.util.Base64;
-
 /**
  * Created by Tanya on 10.12.2016.
  */
