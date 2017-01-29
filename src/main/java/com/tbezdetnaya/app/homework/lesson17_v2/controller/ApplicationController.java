@@ -1,6 +1,5 @@
 package com.tbezdetnaya.app.homework.lesson17_v2.controller;
 
-import com.tbezdetnaya.app.homework.lesson17_v2.domain.MenuItem;
 import com.tbezdetnaya.app.homework.lesson17_v2.service.SearchService;
 
 
@@ -27,14 +26,14 @@ public class ApplicationController {
             System.out.println("SEARCH_STUDENT");
             MenuItem item = MenuItem.valueOf((sc.next().toUpperCase()));
             switch (item){
-                case SEARCH_PERSONS:
+                case SEARCH_PERSON:
                     System.out.println("Enter one of the values: name or surname");
                     searchService.searchPersonsBySurnameOrName(sc.next());
                     break;
-                case SEARCH_EMPLOYEE:
+                case SEARCH_EMPLOYEES:
                     System.out.println("Enter one of the values: name,surname, or faculty");
                     break;
-                case SEARCH_STUDENT:
+                case SEARCH_STUDENTS:
                     System.out.println("Enter one of the values: name,surname,faculty or course");
                     break;
 
