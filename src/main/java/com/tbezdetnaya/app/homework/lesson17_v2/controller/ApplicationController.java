@@ -1,6 +1,6 @@
 package com.tbezdetnaya.app.homework.lesson17_v2.controller;
 
-import com.tbezdetnaya.app.homework.lesson16.MenuItem;
+import com.tbezdetnaya.app.homework.lesson17_v2.domain.MenuItem;
 import com.tbezdetnaya.app.homework.lesson17_v2.service.SearchService;
 
 
@@ -22,19 +22,19 @@ public class ApplicationController {
 
         try{
             System.out.println("Choose search category:");
-            System.out.println("Task1 - Search all cards");
-            System.out.println("Task2 - Search employees");
-            System.out.println("Task3 - Search students");
+            System.out.println("SEARCH_PERSONS");
+            System.out.println("SEARCH_EMPLOYEE");
+            System.out.println("SEARCH_STUDENT");
             MenuItem item = MenuItem.valueOf((sc.next().toUpperCase()));
             switch (item){
-                case TASK1:
+                case SEARCH_PERSONS:
                     System.out.println("Enter one of the values: name or surname");
                     searchService.searchPersonsBySurnameOrName(sc.next());
                     break;
-                case TASK2:
+                case SEARCH_EMPLOYEE:
                     System.out.println("Enter one of the values: name,surname, or faculty");
                     break;
-                case TASK3:
+                case SEARCH_STUDENT:
                     System.out.println("Enter one of the values: name,surname,faculty or course");
                     break;
 
