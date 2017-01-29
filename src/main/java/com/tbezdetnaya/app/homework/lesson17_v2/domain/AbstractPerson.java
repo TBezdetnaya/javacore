@@ -7,6 +7,7 @@ public abstract class AbstractPerson {
     private String name;
     private String surname;
     private String faculty;
+    private int id;
 
 
     public String getName() {

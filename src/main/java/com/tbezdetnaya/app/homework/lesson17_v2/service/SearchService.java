@@ -7,5 +7,5 @@ import java.util.List;
  * Created by Tanya on 28.01.2017.
  */
 public interface SearchService {
-  List<AbstractPerson> searchSurnameOrName(String input);
+  List<AbstractPerson> searchPersonsBySurnameOrName(String input);
 }

@@ -26,26 +26,27 @@ public class SearchServiceImpl implements SearchService {
 
 
     @Override
-    public List<AbstractPerson> searchSurnameOrName(String input) {
+    public List<AbstractPerson> searchPersonsBySurnameOrName(String input) {
 
         List<Student> students = studentDAO.getStudents();
         List<Employee> employees = employeeDAO.getEmployees();
         List<AbstractPerson> result = new ArrayList<>();
         for (int i = 0; i <students.size() ; i++) {
             Student student = students.get(i);
-            if (student.getName().toLowerCase().contains(input)
-                    ||student.getSurname().toLowerCase().contains(input)){
+            if (student.getSurname().toLowerCase().equalsIgnoreCase(input)
+                    || student.getName().toLowerCase().equalsIgnoreCase(input)){
                 result.add(student);
             }
         }
         for (int i = 0; i <employees.size() ; i++) {
             Employee employee = employees.get(i);
-            if(employee.getName().toLowerCase().contains(input)
-                    ||employee.getSurname().toLowerCase().contains(input)){
+            if(employee.getSurname().toLowerCase().equalsIgnoreCase(input)
+                    || employee.getName().toLowerCase().equalsIgnoreCase(input)){
                 result.add(employee);
             }
 
         }
+        System.out.println(result);
         return result;
     }
 }

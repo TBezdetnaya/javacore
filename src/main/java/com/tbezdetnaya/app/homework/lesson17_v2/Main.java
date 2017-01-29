@@ -24,7 +24,7 @@ public class Main {
         CSVEmployeeDAOImpl csvEmployeeDAO = new CSVEmployeeDAOImpl(csvStorage);
         SearchServiceImpl searchService = new SearchServiceImpl(csvStudentDAO,csvEmployeeDAO);
         System.out.println("Enter one of the values: name or surname");
-        searchService.searchSurnameOrName(sc.next());
+        searchService.searchPersonsBySurnameOrName(sc.next());
 
 
 
