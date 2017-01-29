@@ -32,6 +32,7 @@ public abstract class AbstractPerson {
     public void setFaculty(String faculty) {
         this.faculty = faculty;
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -52,5 +53,6 @@ public abstract class AbstractPerson {
         result = 31 * result + (faculty != null ? faculty.hashCode() : 0);
         return result;
     }
+
 
 }
