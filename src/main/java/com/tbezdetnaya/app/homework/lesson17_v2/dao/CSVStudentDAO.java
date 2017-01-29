@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Created by Tanya on 28.01.2017.
  */
-public interface StudentDAO {
+public interface CSVStudentDAO {
     List<Student> getStudents();
 
 }

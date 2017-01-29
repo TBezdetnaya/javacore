@@ -1,7 +1,7 @@
 package com.tbezdetnaya.app.homework.lesson17_v2.service.impl;
 
-import com.tbezdetnaya.app.homework.lesson17_v2.dao.EmployeeDAO;
-import com.tbezdetnaya.app.homework.lesson17_v2.dao.StudentDAO;
+import com.tbezdetnaya.app.homework.lesson17_v2.dao.CSVEmployeeDAO;
+import com.tbezdetnaya.app.homework.lesson17_v2.dao.CSVStudentDAO;
 import com.tbezdetnaya.app.homework.lesson17_v2.domain.AbstractPerson;
 import com.tbezdetnaya.app.homework.lesson17_v2.domain.Employee;
 import com.tbezdetnaya.app.homework.lesson17_v2.domain.Student;
@@ -15,10 +15,10 @@ import java.util.List;
  * Created by Tanya on 28.01.2017.
  */
 public class SearchServiceImpl implements SearchService {
-    private final StudentDAO studentDAO;
-    private final EmployeeDAO employeeDAO;
+    private final CSVStudentDAO studentDAO;
+    private final CSVEmployeeDAO employeeDAO;
 
-    public SearchServiceImpl(StudentDAO studentDAO, EmployeeDAO employeeDAO) {
+    public SearchServiceImpl(CSVStudentDAO studentDAO, CSVEmployeeDAO employeeDAO) {
         this.studentDAO = studentDAO;
         this.employeeDAO = employeeDAO;
 
@@ -27,26 +27,30 @@ public class SearchServiceImpl implements SearchService {
 
     @Override
     public List<AbstractPerson> searchPersonsBySurnameOrName(String input) {
-
         List<Student> students = studentDAO.getStudents();
         List<Employee> employees = employeeDAO.getEmployees();
-        List<AbstractPerson> result = new ArrayList<>();
+        List<AbstractPerson> persons = new ArrayList<>();
         for (int i = 0; i <students.size() ; i++) {
-            Student student = students.get(i);
-            if (student.getSurname().toLowerCase().equalsIgnoreCase(input)
-                    || student.getName().toLowerCase().equalsIgnoreCase(input)){
-                result.add(student);
-            }
-        }
-        for (int i = 0; i <employees.size() ; i++) {
-            Employee employee = employees.get(i);
-            if(employee.getSurname().toLowerCase().equalsIgnoreCase(input)
-                    || employee.getName().toLowerCase().equalsIgnoreCase(input)){
-                result.add(employee);
+            for(final Student student : students) {
+                if (student.getSurname().equalsIgnoreCase(input)
+                        || student.getName().equalsIgnoreCase(input)){
+                    persons.add(student);
+                }
             }
 
         }
-        System.out.println(result);
-        return result;
+        for (int i = 0; i <employees.size() ; i++) {
+            for(final Employee employee : employees) {
+                if(employee.getSurname().equalsIgnoreCase(input)
+                        || employee.getName().equalsIgnoreCase(input)){
+                    persons.add(employee);
+                }
+            }
+
+        }
+
+        return persons;
     }
+
+
 }
