@@ -30,24 +30,22 @@ public class SearchServiceImpl implements SearchService {
         List<Student> students = studentDAO.getStudents();
         List<Employee> employees = employeeDAO.getEmployees();
         List<AbstractPerson> persons = new ArrayList<>();
-        for (int i = 0; i <students.size() ; i++) {
-            for(final Student student : students) {
-                if (student.getSurname().equalsIgnoreCase(input)
-                        || student.getName().equalsIgnoreCase(input)){
-                    persons.add(student);
-                }
-            }
 
-        }
-        for (int i = 0; i <employees.size() ; i++) {
-            for(final Employee employee : employees) {
-                if(employee.getSurname().equalsIgnoreCase(input)
-                        || employee.getName().equalsIgnoreCase(input)){
-                    persons.add(employee);
-                }
+        for (final Student student : students) {
+            if (student.getSurname().equalsIgnoreCase(input)
+                    || student.getName().equalsIgnoreCase(input)) {
+                persons.add(student);
             }
-
         }
+
+
+        for (final Employee employee : employees) {
+            if (employee.getSurname().equalsIgnoreCase(input)
+                    || employee.getName().equalsIgnoreCase(input)) {
+                persons.add(employee);
+            }
+        }
+
 
         return persons;
     }
