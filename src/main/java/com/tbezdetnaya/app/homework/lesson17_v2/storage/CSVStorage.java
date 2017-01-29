@@ -37,7 +37,7 @@ public class CSVStorage {
         reader.readLine();
         while ((dataSourceFileLine = reader.readLine()) != null) {
             final String[] personData = dataSourceFileLine.split(",");
-            final PersonType personType = PersonType.valueOf(personData[5]);
+            final PersonType personType = PersonType.valueOf(personData[6]);
             final EmployeeReader employeeReader = new EmployeeReader();
             final StudentReader studentReader = new StudentReader();
             switch (personType) {

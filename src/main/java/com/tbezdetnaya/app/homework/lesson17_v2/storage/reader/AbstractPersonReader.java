@@ -8,9 +8,9 @@ import com.tbezdetnaya.app.homework.lesson17_v2.domain.AbstractPerson;
 public abstract class AbstractPersonReader<T extends AbstractPerson>{
     protected void fillPerson (String []data, T person) {
 
-        person.setName(data[0]);
-        person.setSurname(data[1]);
-        person.setFaculty(data[2]);
+        person.setName(data[1]);
+        person.setSurname(data[2]);
+        person.setFaculty(data[3]);
 
 
     }

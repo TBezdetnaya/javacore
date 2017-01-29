@@ -12,8 +12,8 @@ public class StudentReader extends AbstractPersonReader<Student> {
     public Student read(final String[] data) {
         final Student student = new Student();
         fillPerson(data, student);
-        student.setCourse(Integer.valueOf(data[3]));
-        student.setType(StudentType.valueOf(data[4]));
+        student.setCourse(Integer.valueOf(data[4]));
+        student.setType(StudentType.valueOf(data[5]));
 
         return student;
     }

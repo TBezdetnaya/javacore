@@ -12,7 +12,7 @@ public class EmployeeReader extends AbstractPersonReader<Employee> {
     public Employee read(final String[] data) {
         final Employee employee = new Employee();
         fillPerson(data, employee);
-        employee.setPosition(EmployeePosition.valueOf(data[4]));
+        employee.setPosition(EmployeePosition.valueOf(data[5]));
 
         return employee;
     }
