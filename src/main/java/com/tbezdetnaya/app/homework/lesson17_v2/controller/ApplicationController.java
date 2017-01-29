@@ -32,10 +32,10 @@ public class ApplicationController {
                     searchService.searchPersonsBySurnameOrName(sc.next());
                     break;
                 case TASK2:
-                    System.out.println("Enter one of the values: name or surname or faculty");
+                    System.out.println("Enter one of the values: name,surname, or faculty");
                     break;
                 case TASK3:
-                    System.out.println("Enter one of the values: name or surname or faculty or course");
+                    System.out.println("Enter one of the values: name,surname,faculty or course");
                     break;
 
 
