@@ -1,4 +1,4 @@
-package com.tbezdetnaya.app.homework.lesson17_v2.controller;
+package com.tbezdetnaya.app.homework.lesson17.cardIndex.controller;
 
 /**
  * Created by Tanya on 29.01.2017.

@@ -3,10 +3,8 @@ import com.tbezdetnaya.app.homework.lesson11.ArrayParse;
 import com.tbezdetnaya.app.homework.lesson16.MenuItem;
 import com.tbezdetnaya.app.homework.lesson17.*;
 import com.tbezdetnaya.app.homework.lesson7.Validation;
-
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -17,9 +15,6 @@ public class Lesson17Runner {
 
     public static void main(String[] args) throws IOException {
         ArrayParse arrayParse = new ArrayParse();
-        FileUtils utils = new FileUtils();
-        utils.readFileWord();
-        Search search = new Search();
         CheckDuplicates checkDuplicates = new CheckDuplicates();
         Scanner sc = new Scanner(System.in);
         System.out.println("Welcome! This application executes several tasks. Enter text \"TASK[number]\" to begin the work:");
@@ -28,10 +23,7 @@ public class Lesson17Runner {
                 System.out.println("1 - sorts the specified arrayDouble into  decrease number");
                 System.out.println("2 - sorts the specified arrayInteger into  decrease number.");
                 System.out.println("3 - sorts the specified arrayFloat into decrease number");
-                System.out.println("4 - search student  in the list of the University");
-                System.out.println("5 - search employee  in the list of the University");
-                System.out.println("6 - search full-list");
-                System.out.println("7 - removing duplicates");
+                System.out.println("4 - removing duplicates");
                 MenuItem item = MenuItem.valueOf((sc.next().toUpperCase()));
                 switch (item){
                     case TASK1:{
@@ -58,19 +50,7 @@ public class Lesson17Runner {
                         System.out.println(Arrays.toString(arrayFloat.getArr()));
                     }
                     break;
-                    case TASK4:
-                        System.out.println("Enter one of the values: name, surname, faculty or course");
-                        search.printResultSearchStudent(search.listSearch(utils.getListStudent()));
-                        break;
-                    case TASK5:
-                        System.out.println("Enter one of the values: name, surname, faculty");
-                        search.printResultSearchEmployee(search.listSearch(utils.getListEmployee()));
-                        break;
-                    case TASK6:
-                        System.out.println("Enter one of the values: name, surname, faculty or course");
-                        ArrayList<Person> listAll = utils.joinLists(utils.getListEmployee(),utils.getListStudent());
-                        search.printResultSearchListAll(search.listSearch(listAll));
-                        break;
+
                     case TASK7:
                         System.out.println("Enter some words  via enter button");
                         checkDuplicates.readWordConcole(sc.next());

@@ -1,8 +1,8 @@
-package com.tbezdetnaya.app.homework.lesson17_v2.controller;
+package com.tbezdetnaya.app.homework.lesson17.cardIndex.controller;
 
-import com.tbezdetnaya.app.homework.lesson17_v2.domain.AbstractPerson;
+import com.tbezdetnaya.app.homework.lesson17.cardIndex.domain.AbstractPerson;
 
-import com.tbezdetnaya.app.homework.lesson17_v2.service.SearchService;
+import com.tbezdetnaya.app.homework.lesson17.cardIndex.service.SearchService;
 
 
 import java.io.IOException;
@@ -61,8 +61,5 @@ public class ApplicationController {
                 System.out.println(person.getName()+ " " + person.getSurname());
             }
         }
-
-
-
-    }
+   }
 }

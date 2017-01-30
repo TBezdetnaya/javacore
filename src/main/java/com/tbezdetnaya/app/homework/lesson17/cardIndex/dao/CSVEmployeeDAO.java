@@ -1,6 +1,6 @@
-package com.tbezdetnaya.app.homework.lesson17_v2.dao;
+package com.tbezdetnaya.app.homework.lesson17.cardIndex.dao;
 
-import com.tbezdetnaya.app.homework.lesson17_v2.domain.Employee;
+import com.tbezdetnaya.app.homework.lesson17.cardIndex.domain.Employee;
 
 import java.util.List;
 
