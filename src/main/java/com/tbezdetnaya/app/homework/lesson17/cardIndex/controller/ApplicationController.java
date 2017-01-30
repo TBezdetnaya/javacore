@@ -36,10 +36,10 @@ public class ApplicationController {
                     printPersonsBySurnameOrName(persons);
                     break;
                 case SEARCH_EMPLOYEES:
-                    System.out.println("Enter one of the values: name,surname, or faculty");
+                    System.out.println("Enter one of the values: name, surname, or faculty");
                     break;
                 case SEARCH_STUDENTS:
-                    System.out.println("Enter one of the values: name,surname,faculty or course");
+                    System.out.println("Enter one of the values: name, surname, faculty or course");
                     break;
 
 
