@@ -1,6 +1,5 @@
 package com.tbezdetnaya.app.homework.lesson17.cardIndex.storage.reader;
-
-import org.junit.Assert;
+import com.tbezdetnaya.app.homework.lesson17.cardIndex.domain.Student;
 import org.junit.Test;
 
 
@@ -12,9 +11,11 @@ public class StudentReaderTest {
     @Test
     public  void readTest (){
         StudentReader studentReader = new StudentReader();
-        String [] data = {"1","Ivan","Ivanov","engineering","2","BACHELOR","STUDENT"};
-        studentReader.read(data);
-        Assert.assertNotNull(studentReader);
+        String[] data = new String[]{"1", "Ivan", "Ivanov", "engineering", "2", "BACHELOR", "STUDENT"};
+        Student student = studentReader.read(data);
+        
+
+
     }
 
 
