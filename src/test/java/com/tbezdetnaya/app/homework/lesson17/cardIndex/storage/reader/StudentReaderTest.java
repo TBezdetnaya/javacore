@@ -12,7 +12,7 @@ import org.junit.Test;
 public class StudentReaderTest {
 
     @Test
-    public  void readTest (){
+    public  void testRead (){
         StudentReader studentReader = new StudentReader();
         Student studentCompare = new Student();
         String[] data = new String[]{"1", "Ivan", "Ivanov", "engineering", "2", "BACHELOR", "STUDENT"};
