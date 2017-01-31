@@ -37,6 +37,7 @@ public class CSVStorageTest {
             Employee employee = employeeReader.read(personData);
             employeesForCompare.add(employee);
         }
+        reader.close();
         Assert.assertEquals(employeesForCompare,employees);
 
 
@@ -56,6 +57,7 @@ public class CSVStorageTest {
             Student student = studentReader.read(personData);
             studentsForCompare.add(student);
         }
+        reader.close();
         Assert.assertEquals(studentsForCompare,students);
 
     }
