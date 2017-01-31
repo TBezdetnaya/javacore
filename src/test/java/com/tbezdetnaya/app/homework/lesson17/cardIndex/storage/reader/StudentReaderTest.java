@@ -14,16 +14,16 @@ public class StudentReaderTest {
     @Test
     public  void testRead (){
         StudentReader studentReader = new StudentReader();
-        Student studentCompare = new Student();
+        Student studentForCompare = new Student();
         String[] data = new String[]{"1", "Ivan", "Ivanov", "engineering", "2", "BACHELOR", "STUDENT"};
         Student student = studentReader.read(data);
-        studentCompare.setId(1);
-        studentCompare.setName("Ivan");
-        studentCompare.setSurname("Ivanov");
-        studentCompare.setFaculty("engineering");
-        studentCompare.setCourse(2);
-        studentCompare.setType(StudentType.BACHELOR);
-        Assert.assertEquals(studentCompare,student);
+        studentForCompare.setId(1);
+        studentForCompare.setName("Ivan");
+        studentForCompare.setSurname("Ivanov");
+        studentForCompare.setFaculty("engineering");
+        studentForCompare.setCourse(2);
+        studentForCompare.setType(StudentType.BACHELOR);
+        Assert.assertEquals(studentForCompare,student);
 
 
     }

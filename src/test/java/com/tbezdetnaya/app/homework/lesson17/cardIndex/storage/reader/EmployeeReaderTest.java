@@ -13,15 +13,15 @@ public class EmployeeReaderTest {
     @Test
     public void testRead() throws IOException {
         EmployeeReader employeeReader = new EmployeeReader();
-        Employee employeeCompare = new Employee();
+        Employee employeeForCompare = new Employee();
         String[] data = new String[]{"4","Oleg","Petrov","engineering","-","PROFESSOR","EMPLOYEE"};
         Employee employee = employeeReader.read(data);
-        employeeCompare.setId(4);
-        employeeCompare.setName("Oleg");
-        employeeCompare.setSurname("Petrov");
-        employeeCompare.setFaculty("engineering");
-        employeeCompare.setPosition(EmployeePosition.PROFESSOR);
-        Assert.assertEquals(employeeCompare,employee);
+        employeeForCompare.setId(4);
+        employeeForCompare.setName("Oleg");
+        employeeForCompare.setSurname("Petrov");
+        employeeForCompare.setFaculty("engineering");
+        employeeForCompare.setPosition(EmployeePosition.PROFESSOR);
+        Assert.assertEquals(employeeForCompare,employee);
 
 
     }
