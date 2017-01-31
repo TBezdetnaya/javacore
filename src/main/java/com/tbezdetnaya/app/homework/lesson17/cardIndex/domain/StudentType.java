@@ -1,4 +1,4 @@
-package com.tbezdetnaya.app.homework.lesson17.cardIndex.domain;
+package com.tbezdetnaya.app.homework.lesson17.cardindex.domain;
 
 /**
  * Created by Tanya on 27.01.2017.

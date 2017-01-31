@@ -1,5 +1,5 @@
-package com.tbezdetnaya.app.homework.lesson17.cardIndex.service;
-import com.tbezdetnaya.app.homework.lesson17.cardIndex.domain.AbstractPerson;
+package com.tbezdetnaya.app.homework.lesson17.cardindex.service;
+import com.tbezdetnaya.app.homework.lesson17.cardindex.domain.AbstractPerson;
 
 import java.util.List;
 

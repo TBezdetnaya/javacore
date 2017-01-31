@@ -1,7 +1,7 @@
-package com.tbezdetnaya.app.homework.lesson17.cardIndex.storage.reader;
+package com.tbezdetnaya.app.homework.lesson17.cardindex.storage.reader;
 
-import com.tbezdetnaya.app.homework.lesson17.cardIndex.domain.Employee;
-import com.tbezdetnaya.app.homework.lesson17.cardIndex.domain.EmployeePosition;
+import com.tbezdetnaya.app.homework.lesson17.cardindex.domain.Employee;
+import com.tbezdetnaya.app.homework.lesson17.cardindex.domain.EmployeePosition;
 
 /**
  * Created by Tanya on 28.01.2017.

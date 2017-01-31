@@ -1,8 +1,8 @@
-package com.tbezdetnaya.app.homework.lesson17.cardIndex.dao.impl;
+package com.tbezdetnaya.app.homework.lesson17.cardindex.dao.impl;
 
-import com.tbezdetnaya.app.homework.lesson17.cardIndex.dao.CSVStudentDAO;
-import com.tbezdetnaya.app.homework.lesson17.cardIndex.domain.Student;
-import com.tbezdetnaya.app.homework.lesson17.cardIndex.storage.CSVStorage;
+import com.tbezdetnaya.app.homework.lesson17.cardindex.dao.CSVStudentDAO;
+import com.tbezdetnaya.app.homework.lesson17.cardindex.domain.Student;
+import com.tbezdetnaya.app.homework.lesson17.cardindex.storage.CSVStorage;
 
 import java.util.List;
 

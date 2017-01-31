@@ -1,11 +1,11 @@
-package com.tbezdetnaya.app.homework.lesson17.cardIndex.service.impl;
+package com.tbezdetnaya.app.homework.lesson17.cardindex.service.impl;
 
-import com.tbezdetnaya.app.homework.lesson17.cardIndex.dao.CSVEmployeeDAO;
-import com.tbezdetnaya.app.homework.lesson17.cardIndex.dao.CSVStudentDAO;
-import com.tbezdetnaya.app.homework.lesson17.cardIndex.domain.AbstractPerson;
-import com.tbezdetnaya.app.homework.lesson17.cardIndex.domain.Employee;
-import com.tbezdetnaya.app.homework.lesson17.cardIndex.domain.Student;
-import com.tbezdetnaya.app.homework.lesson17.cardIndex.service.SearchService;
+import com.tbezdetnaya.app.homework.lesson17.cardindex.dao.CSVEmployeeDAO;
+import com.tbezdetnaya.app.homework.lesson17.cardindex.dao.CSVStudentDAO;
+import com.tbezdetnaya.app.homework.lesson17.cardindex.domain.AbstractPerson;
+import com.tbezdetnaya.app.homework.lesson17.cardindex.domain.Employee;
+import com.tbezdetnaya.app.homework.lesson17.cardindex.domain.Student;
+import com.tbezdetnaya.app.homework.lesson17.cardindex.service.SearchService;
 
 import java.util.ArrayList;
 import java.util.List;

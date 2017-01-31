@@ -1,8 +1,8 @@
-package com.tbezdetnaya.app.homework.lesson17.cardIndex.controller;
+package com.tbezdetnaya.app.homework.lesson17.cardindex.controller;
 
-import com.tbezdetnaya.app.homework.lesson17.cardIndex.domain.AbstractPerson;
+import com.tbezdetnaya.app.homework.lesson17.cardindex.domain.AbstractPerson;
 
-import com.tbezdetnaya.app.homework.lesson17.cardIndex.service.SearchService;
+import com.tbezdetnaya.app.homework.lesson17.cardindex.service.SearchService;
 
 
 import java.io.IOException;

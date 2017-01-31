@@ -1,6 +1,6 @@
-package com.tbezdetnaya.app.homework.lesson17.cardIndex.storage.reader;
+package com.tbezdetnaya.app.homework.lesson17.cardindex.storage.reader;
 
-import com.tbezdetnaya.app.homework.lesson17.cardIndex.domain.*;
+import com.tbezdetnaya.app.homework.lesson17.cardindex.domain.*;
 import org.junit.Assert;
 import org.junit.Test;
 import java.io.IOException;
@@ -13,15 +13,15 @@ public class EmployeeReaderTest {
     @Test
     public void testRead() throws IOException {
         EmployeeReader employeeReader = new EmployeeReader();
-        Employee employeeForCompare = new Employee();
+        Employee expectedEmployee = new Employee();
         String[] data = new String[]{"4","Oleg","Petrov","engineering","-","PROFESSOR","EMPLOYEE"};
-        Employee employee = employeeReader.read(data);
-        employeeForCompare.setId(4);
-        employeeForCompare.setName("Oleg");
-        employeeForCompare.setSurname("Petrov");
-        employeeForCompare.setFaculty("engineering");
-        employeeForCompare.setPosition(EmployeePosition.PROFESSOR);
-        Assert.assertEquals(employeeForCompare,employee);
+        Employee actualEmployee = employeeReader.read(data);
+        expectedEmployee.setId(4);
+        expectedEmployee.setName("Oleg");
+        expectedEmployee.setSurname("Petrov");
+        expectedEmployee.setFaculty("engineering");
+        expectedEmployee.setPosition(EmployeePosition.PROFESSOR);
+        Assert.assertEquals(expectedEmployee,actualEmployee);
 
 
     }

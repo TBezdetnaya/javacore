@@ -1,8 +1,8 @@
-package com.tbezdetnaya.app.homework.lesson17.cardIndex.storage;
+package com.tbezdetnaya.app.homework.lesson17.cardindex.storage;
 
-import com.tbezdetnaya.app.homework.lesson17.cardIndex.domain.*;
-import com.tbezdetnaya.app.homework.lesson17.cardIndex.storage.reader.EmployeeReader;
-import com.tbezdetnaya.app.homework.lesson17.cardIndex.storage.reader.StudentReader;
+import com.tbezdetnaya.app.homework.lesson17.cardindex.domain.*;
+import com.tbezdetnaya.app.homework.lesson17.cardindex.storage.reader.EmployeeReader;
+import com.tbezdetnaya.app.homework.lesson17.cardindex.storage.reader.StudentReader;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

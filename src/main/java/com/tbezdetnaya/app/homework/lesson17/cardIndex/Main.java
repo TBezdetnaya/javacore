@@ -1,12 +1,12 @@
-package com.tbezdetnaya.app.homework.lesson17.cardIndex;
-import com.tbezdetnaya.app.homework.lesson17.cardIndex.controller.ApplicationController;
-import com.tbezdetnaya.app.homework.lesson17.cardIndex.dao.CSVEmployeeDAO;
-import com.tbezdetnaya.app.homework.lesson17.cardIndex.dao.CSVStudentDAO;
-import com.tbezdetnaya.app.homework.lesson17.cardIndex.dao.impl.CSVEmployeeDAOImpl;
-import com.tbezdetnaya.app.homework.lesson17.cardIndex.dao.impl.CSVStudentDAOImpl;
-import com.tbezdetnaya.app.homework.lesson17.cardIndex.service.SearchService;
-import com.tbezdetnaya.app.homework.lesson17.cardIndex.service.impl.SearchServiceImpl;
-import com.tbezdetnaya.app.homework.lesson17.cardIndex.storage.CSVStorage;
+package com.tbezdetnaya.app.homework.lesson17.cardindex;
+import com.tbezdetnaya.app.homework.lesson17.cardindex.controller.ApplicationController;
+import com.tbezdetnaya.app.homework.lesson17.cardindex.dao.CSVEmployeeDAO;
+import com.tbezdetnaya.app.homework.lesson17.cardindex.dao.CSVStudentDAO;
+import com.tbezdetnaya.app.homework.lesson17.cardindex.dao.impl.CSVEmployeeDAOImpl;
+import com.tbezdetnaya.app.homework.lesson17.cardindex.dao.impl.CSVStudentDAOImpl;
+import com.tbezdetnaya.app.homework.lesson17.cardindex.service.SearchService;
+import com.tbezdetnaya.app.homework.lesson17.cardindex.service.impl.SearchServiceImpl;
+import com.tbezdetnaya.app.homework.lesson17.cardindex.storage.CSVStorage;
 
 import java.io.IOException;
 
