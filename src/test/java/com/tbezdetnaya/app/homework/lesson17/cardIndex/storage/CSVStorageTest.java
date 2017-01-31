@@ -6,7 +6,9 @@ import org.junit.Assert;
 import org.junit.Test;
 
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -23,22 +25,19 @@ public class CSVStorageTest {
 
         Employee employee = new Employee();
         Employee employee1 = new Employee();
-        List<Employee> expectedEmployees = new ArrayList<>();
+
         employee.setId(1);
         employee.setName("Ivan");
         employee.setSurname("Ivanov");
         employee.setFaculty("engineering");
         employee.setPosition(EmployeePosition.PROFESSOR);
 
-        expectedEmployees.add(employee);
-
-
         employee1.setId(4);
         employee1.setName("Oleg");
         employee1.setSurname("Petrov");
         employee1.setFaculty("engineering");
         employee1.setPosition(EmployeePosition.ASSISTANT);
-        expectedEmployees.add(employee1);
+        List<Employee> expectedEmployees = Arrays.asList(employee,employee1);
 
         Assert.assertEquals(expectedEmployees,actualEmployees);
 
@@ -53,7 +52,7 @@ public class CSVStorageTest {
 
         Student student = new Student();
         Student student1 = new Student();
-        List<Student> expectedStudents = new ArrayList<>();
+
         student.setId(2);
         student.setName("Fedor");
         student.setSurname("Fedorov");
@@ -61,19 +60,13 @@ public class CSVStorageTest {
         student.setCourse(2);
         student.setType(StudentType.BACHELOR);
 
-        expectedStudents.add(student);
-
-
         student1.setId(3);
         student1.setName("Petr");
         student1.setSurname("Petrov");
         student1.setFaculty("medical");
         student1.setCourse(2);
         student1.setType(StudentType.MASTER);
-
-        expectedStudents.add(student1);
-
-
+        List<Student> expectedStudents = Arrays.asList(student,student1);
         Assert.assertEquals(expectedStudents,actualStudents);
 
     }
