@@ -30,7 +30,6 @@ public class SearchServiceImpl implements SearchService {
         List<Student> students = studentDAO.getStudents();
         List<Employee> employees = employeeDAO.getEmployees();
         List<AbstractPerson> persons = new ArrayList<>();
-
         for (final Student student : students) {
             if (student.getSurname().equalsIgnoreCase(input)
                     || student.getName().equalsIgnoreCase(input)) {
@@ -38,15 +37,12 @@ public class SearchServiceImpl implements SearchService {
             }
         }
 
-
         for (final Employee employee : employees) {
             if (employee.getSurname().equalsIgnoreCase(input)
                     || employee.getName().equalsIgnoreCase(input)) {
                 persons.add(employee);
             }
         }
-
-
         return persons;
     }
 
@@ -55,9 +51,9 @@ public class SearchServiceImpl implements SearchService {
         List<Student> students = studentDAO.getStudents();
         List<AbstractPerson> persons = new ArrayList<>();
         for (final Student student : students){
-            if (student.getSurname().equalsIgnoreCase(input)
-                    ||student.getName().equalsIgnoreCase(input)
-                    ||student.getFaculty().equalsIgnoreCase(input)||student.getCourse().equals(input)){
+            if (student.getSurname().toLowerCase().contains(input)
+                    ||student.getName().toLowerCase().contains(input)
+                    ||student.getFaculty().toLowerCase().contains(input)){
                 persons.add(student);
 
             }
@@ -65,5 +61,17 @@ public class SearchServiceImpl implements SearchService {
         return persons;
     }
 
-
+    @Override
+    public List<AbstractPerson> searchEmploeessBySurnameOrNameOrFaculty(String input) {
+        List<Employee> employees = employeeDAO.getEmployees();
+        List<AbstractPerson> persons = new ArrayList<>();
+        for (final Employee employee : employees) {
+            if (employee.getSurname().toLowerCase().contains(input)
+                    ||employee.getName().toLowerCase().contains(input)
+                    ||employee.getFaculty().toLowerCase().contains(input)) {
+                persons.add(employee);
+            }
+        }
+        return persons;
+    }
 }

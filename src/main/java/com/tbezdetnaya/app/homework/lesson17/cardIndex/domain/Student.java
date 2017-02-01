@@ -8,11 +8,11 @@ public class Student extends AbstractPerson {
     private StudentType type;
 
 
-    public Integer getCourse() {
+    public int getCourse() {
         return course;
     }
 
-    public void setCourse(Integer course) {
+    public void setCourse(int course) {
         this.course = course;
     }
 

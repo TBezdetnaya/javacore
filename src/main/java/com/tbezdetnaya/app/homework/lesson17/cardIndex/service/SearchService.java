@@ -9,6 +9,7 @@ import java.util.List;
 public interface SearchService {
   List<AbstractPerson> searchPersonsBySurnameOrName(String input);
   List<AbstractPerson> searchStudentsBySurnameOrNameOrFacultyOrCourse(String input);
+  List<AbstractPerson> searchEmploeessBySurnameOrNameOrFaculty(String input);
 
 
 }
