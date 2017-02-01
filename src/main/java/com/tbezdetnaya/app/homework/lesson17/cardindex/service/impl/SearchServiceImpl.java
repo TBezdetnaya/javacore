@@ -54,7 +54,7 @@ public class SearchServiceImpl implements SearchService {
             if (student.getSurname().toLowerCase().contains(input.toLowerCase())
                     ||student.getName().toLowerCase().contains(input.toLowerCase())
                     ||student.getFaculty().toLowerCase().contains(input.toLowerCase())
-                    ||String.valueOf(student.getCourse()).contains(input)){
+                    ||String.valueOf(student.getCourse()).contains(input.toLowerCase())){
                 studentList.add(student);
 
             }
