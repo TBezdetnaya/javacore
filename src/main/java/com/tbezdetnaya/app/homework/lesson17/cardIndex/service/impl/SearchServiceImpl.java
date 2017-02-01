@@ -50,5 +50,20 @@ public class SearchServiceImpl implements SearchService {
         return persons;
     }
 
+    @Override
+    public List<AbstractPerson> searchStudentsBySurnameOrNameOrFacultyOrCourse(String input) {
+        List<Student> students = studentDAO.getStudents();
+        List<AbstractPerson> persons = new ArrayList<>();
+        for (final Student student : students){
+            if (student.getSurname().equalsIgnoreCase(input)
+                    ||student.getName().equalsIgnoreCase(input)
+                    ||student.getFaculty().equalsIgnoreCase(input)||student.getCourse().equals(input)){
+                persons.add(student);
+
+            }
+        }
+        return persons;
+    }
+
 
 }

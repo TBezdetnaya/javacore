@@ -2,6 +2,7 @@ package com.tbezdetnaya.app.homework.lesson17.cardindex.controller;
 
 import com.tbezdetnaya.app.homework.lesson17.cardindex.domain.AbstractPerson;
 
+import com.tbezdetnaya.app.homework.lesson17.cardindex.domain.Student;
 import com.tbezdetnaya.app.homework.lesson17.cardindex.service.SearchService;
 
 
@@ -26,20 +27,25 @@ public class ApplicationController {
         try{
             System.out.println("Choose search category:");
             System.out.println("SEARCH_PERSON");
-            System.out.println("SEARCH_EMPLOYEE");
-            System.out.println("SEARCH_STUDENT");
+            System.out.println("SEARCH_EMPLOYEES");
+            System.out.println("SEARCH_STUDENTS");
             MenuItem item = MenuItem.valueOf((sc.next().toUpperCase()));
             switch (item){
-                case SEARCH_PERSON:
+                case SEARCH_PERSON: {
                     System.out.println("Enter one of the values: name or surname");
-                    List <AbstractPerson> persons = searchService.searchPersonsBySurnameOrName(sc.next());
+                    List<AbstractPerson> persons = searchService.searchPersonsBySurnameOrName(sc.next());
                     printPersonsBySurnameOrName(persons);
+                }
                     break;
                 case SEARCH_EMPLOYEES:
                     System.out.println("Enter one of the values: name, surname, or faculty");
                     break;
-                case SEARCH_STUDENTS:
+                case SEARCH_STUDENTS: {
                     System.out.println("Enter one of the values: name, surname, faculty or course");
+                    List<AbstractPerson> persons = searchService.searchStudentsBySurnameOrNameOrFacultyOrCourse(sc.next());
+                    printStudentsBySurnameOrNameOrFacultyOrCourse(persons);
+
+                }
                     break;
 
 
@@ -62,4 +68,15 @@ public class ApplicationController {
             }
         }
    }
+    private void printStudentsBySurnameOrNameOrFacultyOrCourse(List<AbstractPerson> persons){
+        Student student = new Student();
+        if(persons.isEmpty()) {
+            System.out.println("Not found");
+        }else{
+            for (final AbstractPerson person : persons) {
+                System.out.println(person.getName()+ " " + person.getSurname() + ", faculty - "
+                        + person.getFaculty() + "; course is " + student.getCourse() + ", type - " + student.getType());
+            }
+        }
+    }
 }
