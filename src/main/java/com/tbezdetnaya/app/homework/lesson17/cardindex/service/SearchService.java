@@ -1,5 +1,7 @@
 package com.tbezdetnaya.app.homework.lesson17.cardindex.service;
 import com.tbezdetnaya.app.homework.lesson17.cardindex.domain.AbstractPerson;
+import com.tbezdetnaya.app.homework.lesson17.cardindex.domain.Employee;
+import com.tbezdetnaya.app.homework.lesson17.cardindex.domain.Student;
 
 import java.util.List;
 
@@ -8,8 +10,8 @@ import java.util.List;
  */
 public interface SearchService {
   List<AbstractPerson> searchPersonsBySurnameOrName(String input);
-  List<AbstractPerson> searchStudentsBySurnameOrNameOrFacultyOrCourse(String input);
-  List<AbstractPerson> searchEmploeessBySurnameOrNameOrFaculty(String input);
+  List<Student> searchStudentsBySurnameOrNameOrFacultyOrCourse(String input);
+  List<Employee> searchEmploeessBySurnameOrNameOrFaculty(String input);
 
 
 }

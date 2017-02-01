@@ -36,13 +36,13 @@ public class ApplicationController {
                     break;
                 case SEARCH_EMPLOYEES: {
                     System.out.println("Enter one of the values: name, surname, or faculty");
-                    List<AbstractPerson> persons = searchService.searchEmploeessBySurnameOrNameOrFaculty(sc.next());
+                    List<Employee> persons = searchService.searchEmploeessBySurnameOrNameOrFaculty(sc.next());
                     printEmployeesBySurnameOrNameOrFaculty(persons);
                 }
                     break;
                 case SEARCH_STUDENTS: {
                     System.out.println("Enter one of the values: name, surname, faculty or course");
-                    List<AbstractPerson> persons = searchService.searchStudentsBySurnameOrNameOrFacultyOrCourse(sc.next());
+                    List<Student> persons = searchService.searchStudentsBySurnameOrNameOrFacultyOrCourse(sc.next());
                     printStudentsBySurnameOrNameOrFacultyOrCourse(persons);
                 }
                 break;
@@ -63,26 +63,24 @@ public class ApplicationController {
             }
         }
    }
-    private void printStudentsBySurnameOrNameOrFacultyOrCourse(List<AbstractPerson> persons){
-        Student student = new Student();
-        if(persons.isEmpty()) {
+    private void printStudentsBySurnameOrNameOrFacultyOrCourse(List<Student> students){
+        if(students.isEmpty()) {
             System.out.println("Not found");
         }else{
-            for (final AbstractPerson person : persons) {
-                System.out.println(person.getName()+ " " + person.getSurname() + ", faculty - "
-                        + person.getFaculty() + "; course is " + student.getCourse() + ", type - " + student.getType());
+            for (final Student student: students) {
+                System.out.println(student.getName()+ " " + student.getSurname() + ", faculty - "
+                        + student.getFaculty() + "; course is " + student.getCourse() + ", type - " + student.getType());
 
             }
         }
     }
-    private void printEmployeesBySurnameOrNameOrFaculty(List<AbstractPerson> persons){
-        Employee employee = new Employee();
-        if(persons.isEmpty()) {
+    private void printEmployeesBySurnameOrNameOrFaculty(List<Employee> employees){
+        if(employees.isEmpty()) {
             System.out.println("Not found");
         }else{
-            for (final AbstractPerson person : persons) {
-                System.out.println(person.getName()+ " " + person.getSurname() + ", faculty - "
-                        + person.getFaculty()  + ", position - " + employee.getPosition()); //не выводит должность
+            for (final Employee employee: employees) {
+                System.out.println(employee.getName()+ " " + employee.getSurname() + ", faculty - "
+                        + employee.getFaculty()  + ", position - " + employee.getPosition());
 
             }
         }

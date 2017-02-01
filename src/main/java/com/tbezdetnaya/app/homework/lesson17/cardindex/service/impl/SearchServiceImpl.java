@@ -47,31 +47,34 @@ public class SearchServiceImpl implements SearchService {
     }
 
     @Override
-    public List<AbstractPerson> searchStudentsBySurnameOrNameOrFacultyOrCourse(String input) {
+    public List<Student> searchStudentsBySurnameOrNameOrFacultyOrCourse(String input) {
         List<Student> students = studentDAO.getStudents();
-        List<AbstractPerson> persons = new ArrayList<>();
+        List<Student> studentList = new ArrayList<>();
         for (final Student student : students){
-            if (student.getSurname().toLowerCase().contains(input)
-                    ||student.getName().toLowerCase().contains(input)
-                    ||student.getFaculty().toLowerCase().contains(input)){
-                persons.add(student);
+            if (student.getSurname().toLowerCase().contains(input.toLowerCase())
+                    ||student.getName().toLowerCase().contains(input.toLowerCase())
+                    ||student.getFaculty().toLowerCase().contains(input.toLowerCase())){
+                studentList.add(student);
 
             }
         }
-        return persons;
+        return studentList;
     }
+
 
     @Override
-    public List<AbstractPerson> searchEmploeessBySurnameOrNameOrFaculty(String input) {
+    public List<Employee> searchEmploeessBySurnameOrNameOrFaculty(String input) {
         List<Employee> employees = employeeDAO.getEmployees();
-        List<AbstractPerson> persons = new ArrayList<>();
+        List<Employee> employeeList = new ArrayList<>();
         for (final Employee employee : employees) {
-            if (employee.getSurname().toLowerCase().contains(input)
-                    ||employee.getName().toLowerCase().contains(input)
-                    ||employee.getFaculty().toLowerCase().contains(input)) {
-                persons.add(employee);
+            if (employee.getSurname().toLowerCase().contains(input.toLowerCase())
+                    ||employee.getName().toLowerCase().contains(input.toLowerCase())
+                    ||employee.getFaculty().toLowerCase().contains(input.toLowerCase())) {
+                employeeList.add(employee);
             }
         }
-        return persons;
+        return employeeList ;
+
     }
+
 }

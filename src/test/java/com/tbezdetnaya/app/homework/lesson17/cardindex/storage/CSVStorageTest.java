@@ -18,25 +18,24 @@ public class CSVStorageTest {
     @Test
     public void testGetEmployees() throws Exception {
         CSVStorage csvStorage = new CSVStorage(dataFileForTest);
+        Employee professor = new Employee();
+        Employee assistant = new Employee();
+
+        professor.setId(1);
+        professor.setName("Ivan");
+        professor.setSurname("Ivanov");
+        professor.setFaculty("engineering");
+        professor.setPosition(EmployeePosition.PROFESSOR);
+
+        assistant.setId(4);
+        assistant.setName("Oleg");
+        assistant.setSurname("Petrov");
+        assistant.setFaculty("engineering");
+        assistant.setPosition(EmployeePosition.ASSISTANT);
+
+        List<Employee> expectedEmployees = Arrays.asList(professor, assistant);
         List<Employee> actualEmployees = csvStorage.getEmployees();
-
-        Employee employee = new Employee();
-        Employee employee1 = new Employee();
-
-        employee.setId(1);
-        employee.setName("Ivan");
-        employee.setSurname("Ivanov");
-        employee.setFaculty("engineering");
-        employee.setPosition(EmployeePosition.PROFESSOR);
-
-        employee1.setId(4);
-        employee1.setName("Oleg");
-        employee1.setSurname("Petrov");
-        employee1.setFaculty("engineering");
-        employee1.setPosition(EmployeePosition.ASSISTANT);
-        List<Employee> expectedEmployees = Arrays.asList(employee,employee1);
-
-        Assert.assertEquals(expectedEmployees,actualEmployees);
+        Assert.assertEquals(expectedEmployees, actualEmployees);
 
 
     }
@@ -45,25 +44,25 @@ public class CSVStorageTest {
     @Test
     public void testGetStudents() throws Exception {
         CSVStorage csvStorage = new CSVStorage(dataFileForTest);
+        Student bachelor = new Student();
+        Student master = new Student();
+
+        bachelor .setId(2);
+        bachelor .setName("Fedor");
+        bachelor .setSurname("Fedorov");
+        bachelor .setFaculty("medical");
+        bachelor .setCourse(2);
+        bachelor .setType(StudentType.BACHELOR);
+
+        master.setId(3);
+        master.setName("Petr");
+        master.setSurname("Petrov");
+        master.setFaculty("medical");
+        master.setCourse(2);
+        master.setType(StudentType.MASTER);
+
+        List<Student> expectedStudents = Arrays.asList(bachelor, master);
         List<Student>  actualStudents = csvStorage.getStudents();
-
-        Student student = new Student();
-        Student student1 = new Student();
-
-        student.setId(2);
-        student.setName("Fedor");
-        student.setSurname("Fedorov");
-        student.setFaculty("medical");
-        student.setCourse(2);
-        student.setType(StudentType.BACHELOR);
-
-        student1.setId(3);
-        student1.setName("Petr");
-        student1.setSurname("Petrov");
-        student1.setFaculty("medical");
-        student1.setCourse(2);
-        student1.setType(StudentType.MASTER);
-        List<Student> expectedStudents = Arrays.asList(student,student1);
         Assert.assertEquals(expectedStudents,actualStudents);
 
     }

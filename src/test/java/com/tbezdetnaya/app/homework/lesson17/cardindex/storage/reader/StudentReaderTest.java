@@ -16,13 +16,15 @@ public class StudentReaderTest {
         StudentReader studentReader = new StudentReader();
         Student expectedStudent = new Student();
         String[] data = new String[]{"1", "Ivan", "Ivanov", "engineering", "2", "BACHELOR", "STUDENT"};
-        Student actualStudent = studentReader.read(data);
+
         expectedStudent.setId(1);
         expectedStudent.setName("Ivan");
         expectedStudent.setSurname("Ivanov");
         expectedStudent.setFaculty("engineering");
         expectedStudent.setCourse(2);
         expectedStudent.setType(StudentType.BACHELOR);
+
+        Student actualStudent = studentReader.read(data);
         Assert.assertEquals(expectedStudent,actualStudent);
 
 

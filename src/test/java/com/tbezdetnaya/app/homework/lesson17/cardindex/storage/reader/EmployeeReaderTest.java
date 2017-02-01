@@ -15,12 +15,14 @@ public class EmployeeReaderTest {
         EmployeeReader employeeReader = new EmployeeReader();
         Employee expectedEmployee = new Employee();
         String[] data = new String[]{"4","Oleg","Petrov","engineering","-","PROFESSOR","EMPLOYEE"};
-        Employee actualEmployee = employeeReader.read(data);
+
         expectedEmployee.setId(4);
         expectedEmployee.setName("Oleg");
         expectedEmployee.setSurname("Petrov");
         expectedEmployee.setFaculty("engineering");
         expectedEmployee.setPosition(EmployeePosition.PROFESSOR);
+
+        Employee actualEmployee = employeeReader.read(data);
         Assert.assertEquals(expectedEmployee,actualEmployee);
 
 
