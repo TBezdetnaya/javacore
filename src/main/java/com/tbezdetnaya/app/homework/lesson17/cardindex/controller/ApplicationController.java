@@ -23,7 +23,7 @@ public class ApplicationController {
 
         try{
             System.out.println("Choose search category:");
-            System.out.println("SEARCH_PERSON");
+            System.out.println("SEARCH_PERSONS");
             System.out.println("SEARCH_EMPLOYEES");
             System.out.println("SEARCH_STUDENTS");
             MenuItem item = MenuItem.valueOf((sc.next().toUpperCase()));
