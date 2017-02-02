@@ -4,6 +4,7 @@ import com.tbezdetnaya.app.homework.lesson17.cardindex.domain.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -108,7 +109,7 @@ public class ParameterTest {
         professor.setPosition(EmployeePosition.PROFESSOR);
         List<Employee> employees = new ArrayList<>();
         employees.add(professor);
-        return employees;
+        return Collections.singletonList(professor);
     }
 
 }
