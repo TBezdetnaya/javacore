@@ -37,7 +37,7 @@ public class ParameterTest {
         professor.setId(1);
         professor.setName("Ivan");
         professor.setSurname("Ivanov");
-        professor.setFaculty("engineering");
+        professor.setFaculty("jurisprudence");
         professor.setPosition(EmployeePosition.PROFESSOR);
 
         assistant.setId(4);
@@ -97,6 +97,18 @@ public class ParameterTest {
         persons.add(master);
         return persons;
 
+    }
+    public List<Employee> resultExpectedForSearchByEmolyee() {
+        Employee professor = new Employee();
+        //employee
+        professor.setId(1);
+        professor.setName("Ivan");
+        professor.setSurname("Ivanov");
+        professor.setFaculty("jurisprudence");
+        professor.setPosition(EmployeePosition.PROFESSOR);
+        List<Employee> employees = new ArrayList<>();
+        employees.add(professor);
+        return employees;
     }
 
 }
