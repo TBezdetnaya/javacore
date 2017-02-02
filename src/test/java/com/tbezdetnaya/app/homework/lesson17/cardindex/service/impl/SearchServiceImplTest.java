@@ -20,6 +20,7 @@ public class SearchServiceImplTest {
     private List<Student> students = personsList.listStudent();
     private CSVEmployeeDAO csvEmployeeDAO = new EmployeeDAOImpl(employees);
     private CSVStudentDAO csvStudentDAO = new StudentDAOImpl(students);
+    private SearchService searchService = new SearchServiceImpl(csvStudentDAO, csvEmployeeDAO);
 
     // search check for surname
 
@@ -27,7 +28,6 @@ public class SearchServiceImplTest {
     public void testSearchPersonsBySurnameOrName() throws Exception {
 
         String data = "Petrov";
-        SearchService searchService = new SearchServiceImpl(csvStudentDAO,csvEmployeeDAO);
         List<AbstractPerson> actualPersons = searchService.searchPersonsBySurnameOrName(data);
         List<AbstractPerson> expectedPersons = personsList.resultExpectedForSearchByPersons();
         Assert.assertEquals(expectedPersons, actualPersons);
@@ -39,7 +39,6 @@ public class SearchServiceImplTest {
     public void testSearchPersonsBySurnameOrName1() throws Exception {
 
         String data = "Petr";
-        SearchService searchService = new SearchServiceImpl(csvStudentDAO,csvEmployeeDAO);
         List<AbstractPerson> actualPersons = searchService.searchPersonsBySurnameOrName(data);
         List<AbstractPerson> expectedPersons = personsList.resultExpectedForSearchByPersons1();
         Assert.assertEquals(expectedPersons, actualPersons);
@@ -49,7 +48,6 @@ public class SearchServiceImplTest {
     @Test
     public void testSearchStudentsBySurnameOrNameOrFacultyOrCourse() throws Exception {
         String data = "Petr";
-        SearchService searchService = new SearchServiceImpl(csvStudentDAO, csvEmployeeDAO);
         List<Student> actualStudents = searchService.searchStudentsBySurnameOrNameOrFacultyOrCourse(data);
         List<Student> expectedStudents = personsList.resultExpectedForSearchByStudents();
         Assert.assertEquals(expectedStudents, actualStudents);
@@ -59,7 +57,6 @@ public class SearchServiceImplTest {
     @Test
     public void testSearchStudentsBySurnameOrNameOrFacultyOrCourse1() throws Exception {
         String data = "Petrov";
-        SearchService searchService = new SearchServiceImpl(csvStudentDAO, csvEmployeeDAO);
         List<Student> actualStudents = searchService.searchStudentsBySurnameOrNameOrFacultyOrCourse(data);
         List<Student> expectedStudents = personsList.resultExpectedForSearchByStudents();
         Assert.assertEquals(expectedStudents, actualStudents);
@@ -68,7 +65,6 @@ public class SearchServiceImplTest {
     @Test
     public void testSearchStudentsBySurnameOrNameOrFacultyOrCourse2() throws Exception {
         String data = "Economic";
-        SearchService searchService = new SearchServiceImpl(csvStudentDAO, csvEmployeeDAO);
         List<Student> actualStudents = searchService.searchStudentsBySurnameOrNameOrFacultyOrCourse(data);
         List<Student> expectedStudents = personsList.resultExpectedForSearchByStudents();
         Assert.assertEquals(expectedStudents, actualStudents);
@@ -77,7 +73,6 @@ public class SearchServiceImplTest {
     @Test
     public void testSearchStudentsBySurnameOrNameOrFacultyOrCourse3() throws Exception {
         String data = "3";
-        SearchService searchService = new SearchServiceImpl(csvStudentDAO, csvEmployeeDAO);
         List<Student> actualStudents = searchService.searchStudentsBySurnameOrNameOrFacultyOrCourse(data);
         List<Student> expectedStudents = personsList.resultExpectedForSearchByStudents();
         Assert.assertEquals(expectedStudents, actualStudents);
