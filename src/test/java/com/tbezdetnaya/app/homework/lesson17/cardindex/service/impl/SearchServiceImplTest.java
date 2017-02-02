@@ -15,19 +15,18 @@ import java.util.List;
  * Created by Tanya on 01.02.2017.
  */
 public class SearchServiceImplTest {
-ParameterTest personsList = new ParameterTest();
+    private ParameterTest personsList = new ParameterTest();
+    private List<Employee> employees = personsList.listEmployee();
+    private List<Student> students = personsList.listStudent();
+    private CSVEmployeeDAO csvEmployeeDAO = new EmployeeDAOImpl(employees);
+    private CSVStudentDAO csvStudentDAO = new StudentDAOImpl(students);
+
     // search check for surname
 
     @Test
     public void testSearchPersonsBySurnameOrName() throws Exception {
 
-        List<Employee> employees = personsList.listEmployee();
-        List<Student> students = personsList.listStudent();
-
-        CSVEmployeeDAO csvEmployeeDAO = new EmployeeDAOImpl(employees);
-        CSVStudentDAO csvStudentDAO = new StudentDAOImpl(students);
         String data = "Petrov";
-
         SearchService searchService = new SearchServiceImpl(csvStudentDAO,csvEmployeeDAO);
         List<AbstractPerson> actualPersons = searchService.searchPersonsBySurnameOrName(data);
         List<AbstractPerson> expectedPersons = personsList.resultExpectedForSearchByPersons();
@@ -39,30 +38,45 @@ ParameterTest personsList = new ParameterTest();
     @Test
     public void testSearchPersonsBySurnameOrName1() throws Exception {
 
-        List<Employee> employees = personsList.listEmployee();
-        List<Student> students = personsList.listStudent();
-
-        CSVEmployeeDAO csvEmployeeDAO = new EmployeeDAOImpl(employees);
-        CSVStudentDAO csvStudentDAO = new StudentDAOImpl(students);
         String data = "Petr";
-
         SearchService searchService = new SearchServiceImpl(csvStudentDAO,csvEmployeeDAO);
         List<AbstractPerson> actualPersons = searchService.searchPersonsBySurnameOrName(data);
         List<AbstractPerson> expectedPersons = personsList.resultExpectedForSearchByPersons1();
         Assert.assertEquals(expectedPersons, actualPersons);
 
     }
-
+    // search student for ame
+    @Test
+    public void testSearchStudentsBySurnameOrNameOrFacultyOrCourse() throws Exception {
+        String data = "Petr";
+        SearchService searchService = new SearchServiceImpl(csvStudentDAO, csvEmployeeDAO);
+        List<Student> actualStudents = searchService.searchStudentsBySurnameOrNameOrFacultyOrCourse(data);
+        List<Student> expectedStudents = personsList.resultExpectedForSearchByStudents();
+        Assert.assertEquals(expectedStudents, actualStudents);
+    }
 
     // search student for surname
     @Test
-    public void testSearchStudentsBySurnameOrNameOrFacultyOrCourse() throws Exception {
+    public void testSearchStudentsBySurnameOrNameOrFacultyOrCourse1() throws Exception {
         String data = "Petrov";
-        List<Student> students = personsList.listStudent();
-        List<Employee> employees = personsList.listEmployee();
-        CSVStudentDAO csvStudentDAO = new StudentDAOImpl(students);
-        CSVEmployeeDAO csvEmployeeDAO = new EmployeeDAOImpl(employees);
-
+        SearchService searchService = new SearchServiceImpl(csvStudentDAO, csvEmployeeDAO);
+        List<Student> actualStudents = searchService.searchStudentsBySurnameOrNameOrFacultyOrCourse(data);
+        List<Student> expectedStudents = personsList.resultExpectedForSearchByStudents();
+        Assert.assertEquals(expectedStudents, actualStudents);
+    }
+    // search student for faculty
+    @Test
+    public void testSearchStudentsBySurnameOrNameOrFacultyOrCourse2() throws Exception {
+        String data = "Economic";
+        SearchService searchService = new SearchServiceImpl(csvStudentDAO, csvEmployeeDAO);
+        List<Student> actualStudents = searchService.searchStudentsBySurnameOrNameOrFacultyOrCourse(data);
+        List<Student> expectedStudents = personsList.resultExpectedForSearchByStudents();
+        Assert.assertEquals(expectedStudents, actualStudents);
+    }
+    // search student for course
+    @Test
+    public void testSearchStudentsBySurnameOrNameOrFacultyOrCourse3() throws Exception {
+        String data = "3";
         SearchService searchService = new SearchServiceImpl(csvStudentDAO, csvEmployeeDAO);
         List<Student> actualStudents = searchService.searchStudentsBySurnameOrNameOrFacultyOrCourse(data);
         List<Student> expectedStudents = personsList.resultExpectedForSearchByStudents();

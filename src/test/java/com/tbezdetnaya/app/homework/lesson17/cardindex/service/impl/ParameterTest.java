@@ -24,8 +24,8 @@ public class ParameterTest {
         master.setId(3);
         master.setName("Petr");
         master.setSurname("Petrov");
-        master.setFaculty("medical");
-        master.setCourse(2);
+        master.setFaculty("economic");
+        master.setCourse(3);
         master.setType(StudentType.MASTER);
         List<Student> students = Arrays.asList(bachelor, master);
         return students;
@@ -55,8 +55,8 @@ public class ParameterTest {
         master.setId(3);
         master.setName("Petr");
         master.setSurname("Petrov");
-        master.setFaculty("medical");
-        master.setCourse(2);
+        master.setFaculty("economic");
+        master.setCourse(3);
         master.setType(StudentType.MASTER);
         List<Student> students = new ArrayList<>();
         students.add(master);
@@ -75,8 +75,8 @@ public class ParameterTest {
         master.setId(3);
         master.setName("Petr");
         master.setSurname("Petrov");
-        master.setFaculty("medical");
-        master.setCourse(2);
+        master.setFaculty("economic");
+        master.setCourse(3);
         master.setType(StudentType.MASTER);
 
         List<AbstractPerson> persons = Arrays.asList(master, assistant);
@@ -89,11 +89,12 @@ public class ParameterTest {
         master.setId(3);
         master.setName("Petr");
         master.setSurname("Petrov");
-        master.setFaculty("medical");
-        master.setCourse(2);
+        master.setFaculty("economic");
+        master.setCourse(3);
         master.setType(StudentType.MASTER);
 
-        List<AbstractPerson> persons = Arrays.asList(master);
+        List<AbstractPerson> persons = new ArrayList<>();
+        persons.add(master);
         return persons;
 
     }
