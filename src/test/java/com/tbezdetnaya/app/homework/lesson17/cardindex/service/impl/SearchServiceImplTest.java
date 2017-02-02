@@ -45,7 +45,7 @@ public class SearchServiceImplTest {
         Assert.assertEquals(expectedPersons, actualPersons);
 
     }
-    // search student for ame
+    // search student for name
     @Test
     public void testSearchStudentsBySurnameOrNameOrFacultyOrCourse() throws Exception {
         String data = "Petr";
