@@ -1,0 +1,5 @@
+id,name,surname,faculty,course,position,type
+1,Ivan,Ivanov,engineering,-,PROFESSOR,EMPLOYEE
+2,Fedor,Fedorov,medical,2,BACHELOR,STUDENT
+3,Petr,Petrov,medical,2,MASTER,STUDENT
+4,Oleg,Petrov,engineering,-,ASSISTANT,EMPLOYEE
