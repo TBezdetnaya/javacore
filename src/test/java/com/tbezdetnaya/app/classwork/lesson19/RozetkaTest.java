@@ -18,8 +18,6 @@ public class RozetkaTest {
     private String searchText = "Apple iPhone 6s";
     @Before
     public void setUp() throws Exception {
-        System.setProperty("webdriver.gecko.driver", "resources/geckodriver.exe");
-
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         driver.get("http://rozetka.com.ua/");
@@ -40,8 +38,8 @@ public class RozetkaTest {
     public void test2(){
         driver.findElement(By.xpath(".//*[@id='rz-search']/form/div[1]/div[2]/input")).sendKeys("iphone 6s");
         driver.findElement(By.xpath(".//*[@id='rz-search']/form/span/span/button")).click();
-       // Assert.assertTrue(driver.getPageSource().contains(searchText));// почему то перестало работать
-        Assert.assertTrue(driver.findElement(By.xpath(".//*[@id='block_with_search']/div/div[6]/div/div/div/div/div[2]/a")).getText().contains(searchText));
+        Assert.assertTrue(driver.getPageSource().contains(searchText));// не работает в селениуме 3.0.1,FireFox 50.1
+        //Assert.assertTrue(driver.findElement(By.xpath(".//*[@id='block_with_search']/div/div[5]/div/div/div/div/div[2]/a")).getText().contains(searchText));
 
 
     }

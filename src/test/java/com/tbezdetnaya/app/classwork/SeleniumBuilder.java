@@ -13,7 +13,7 @@ public class SeleniumBuilder {
     
     @Before
     public void setUp() throws Exception {
-        System.setProperty("webdriver.gecko.driver", "resources/geckodriver.exe");
+
         wd = new FirefoxDriver();
         wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     }
